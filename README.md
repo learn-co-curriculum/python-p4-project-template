@@ -138,7 +138,7 @@ create checkpoints in case you ever need to roll those modifications back.
 
 > **Tip: It's always a good idea to start with an empty revision! This allows
 > you to roll all the way back while still holding onto your database. You can
-> create this empty revision with `flask db revision -m'Create DB`.**
+> create this empty revision with `flask db revision -m'Create DB'`.**
 
 If you want to seed your database, now would be a great time to write out your
 `seed.py` script and run it to generate some test data. You may want to use
