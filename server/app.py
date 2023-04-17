@@ -78,6 +78,22 @@ class OrdersById(Resource):
             202
         )
         return response
+    def patch(self, id):
+        try:
+            o = Order.query.filter_by(id = id).first()
+
+            for attr in request.get_json():
+                setattr(o, attr, request.get_json()[attr])
+        except:
+            response_body = {
+                'error': 'no order'
+            }
+            return make_response( response_body, 404 )
+        else:
+            db.session.add(o)
+            db.session.commit()
+        
+        return make_response(o.to_dict(), 200)
     
 api.add_resource(OrdersById, '/orders/<int:id>')
 
