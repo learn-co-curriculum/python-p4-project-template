@@ -28,7 +28,15 @@ class OrdersById(Resource):
         if o == None:
             return make_response({'error': 'no Farmers'}, 404)
         return make_response(o.to_dict(), 200)
-    def post (self,id):
+api.add_resource(OrdersById, '/orders/<int:id>')
+
+class Orders(Resource):
+    def get(self):
+        o_list = [o.to_dict() for o in Order.query.all()]
+        if len(o_list) == 0:
+            return make_response({'error': 'no Orders'}, 404)
+        return make_response(o_list, 200)
+    def post (self):
         data = request.get_json()
         newOrder = Order(
             details= data["details"],
@@ -43,7 +51,7 @@ class OrdersById(Resource):
             db.session.rollback()
             return make_response({'error': f'{repr(e)}'}, 422)
         
-api.add_resource(OrdersById, '/orders/<int:id>')
+api.add_resource(Orders, '/orders')
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
