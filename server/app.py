@@ -18,9 +18,17 @@ class Farmers(Resource):
             return make_response({'error': 'no Farmers'}, 404)
         return make_response(f_list, 200)
 
-    
+
 api.add_resource(Farmers, '/farmers')
 
+class Customers(Resource):
+    def get(self):
+        c_list = [c.to_dict() for c in Customer.query.all()]
+        if len(c_list) == 0:
+            return make_response({'error': 'no Customers'}, 404)
+        return make_response(c_list, 200)
+
+api.add_resource(Customers, '/customers')
 
 class OrdersById(Resource):
     def get(self, id):
