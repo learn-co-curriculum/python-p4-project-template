@@ -17,6 +17,20 @@ class Farmers(Resource):
         if len(f_list) == 0:
             return make_response({'error': 'no Farmers'}, 404)
         return make_response(f_list, 200)
+    
+    def post (self):
+        data = request.get_json()
+        newFarmer = Farmer(
+            name= data["name"],
+            location = data["location"],
+            )
+        try:
+            db.session.add(newFarmer)
+            db.session.commit()
+            return make_response (newFarmer.to_dict(), 200)
+        except Exception as e:
+            db.session.rollback()
+            return make_response({'error': f'{repr(e)}'}, 422)
 
 
 api.add_resource(Farmers, '/farmers')
@@ -27,6 +41,21 @@ class Customers(Resource):
         if len(c_list) == 0:
             return make_response({'error': 'no Customers'}, 404)
         return make_response(c_list, 200)
+    
+    def post (self):
+        data = request.get_json()
+        newCustomer = Customer(
+            name = data["name"],
+            address = data["address"],
+            payment_method = data["payment_method"]
+            )
+        try:
+            db.session.add(newCustomer)
+            db.session.commit()
+            return make_response (newCustomer.to_dict(), 200)
+        except Exception as e:
+            db.session.rollback()
+            return make_response({'error': f'{repr(e)}'}, 422)
 
 api.add_resource(Customers, '/customers')
 
