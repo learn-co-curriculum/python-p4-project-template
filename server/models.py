@@ -1,23 +1,43 @@
 from sqlalchemy_serializer import SerializerMixin
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.ext.associationproxy import association_proxy
 from config import db
+from sqlalchemy.orm import validates
 
 # Models go here!
+db = SQLAlchemy()
 
 class Customer(db.model, SerializerMixin):
     __tablename__ = 'customers'
+
     id = db.Column (db.Integer, primary_key = True)
-    orders = db.relationship('Order', backref = 'customer')
+    name = db.Column(db.String)
+    address = db.Column(db.String)
+    payment_method = db.Column(db.Integer)
+
+    orders = db.relationship('Order', backref = 'customer', cascade= 'all, delete-orphan')
     farmers = association_proxy('orders', 'farmer')
+
+    @validates('payment_method')
+    def validates_pay(self, key, payment_method):
+        if len(payment_method) != 16:
+            raise ValueError('Card number must be 16 digits')
+        return payment_method
 
 class Farmer(db.model, SerializerMixin):
     __tablename__ = 'farmers'
     id = db.Column (db.Integer, primary_key = True)
+    name = db.Column(db.String, unique=True, nullable=False)
+    location = db.Column(db.String)
+
     orders = db.relationship('Order', backref = 'farmer')
     customers = association_proxy('orders', 'customer')
 
 class Order(db.model, SerializerMixin):
     __tablename__ = 'orders'
     id = db.Column (db.Integer, primary_key = True)
+    details = db.Column(db.Text)
+    created_at = db.Column(db.DateTime, server_default = db.func.now())
+    updated_at = db.Column(db.DateTime, onupdate = db.func.now())
     customer_id = db.Column (db.Integer, db.ForeignKey('customers.id'))
     farmer_id = db.Column (db.Integer, db.ForeignKey('farmers.id'))
