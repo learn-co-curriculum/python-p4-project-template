@@ -28,6 +28,20 @@ class OrdersById(Resource):
         if o == None:
             return make_response({'error': 'no Farmers'}, 404)
         return make_response(o.to_dict(), 200)
+    def delete(self, id):
+        o = Order.query.filter_by(id = id).first()
+        db.session.delete(o)
+        db.session.commit()
+        response_body = {
+            "deleted successfully": True,
+            "message": "Order deleted successfully"
+        }
+        response = make_response(
+            response_body,
+            202
+        )
+        return response
+    
 api.add_resource(OrdersById, '/orders/<int:id>')
 
 class Orders(Resource):
