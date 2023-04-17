@@ -9,7 +9,7 @@ from sqlalchemy.orm import validates
 
 class Customer(db.Model, SerializerMixin):
     __tablename__ = 'customers'
-
+    serialize_rules = ('-orders', '-farmers')
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String)
     address = db.Column(db.String)
@@ -26,6 +26,7 @@ class Customer(db.Model, SerializerMixin):
 
 class Farmer(db.Model, SerializerMixin):
     __tablename__ = 'farmers'
+    serialize_rules = ('-orders', '-customers')
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String, unique=True, nullable=False)
     location = db.Column(db.String)
@@ -35,9 +36,10 @@ class Farmer(db.Model, SerializerMixin):
 
 class Order(db.Model, SerializerMixin):
     __tablename__ = 'orders'
+    serialize_rules = ('-farmers', '-customers')
     id = db.Column(db.Integer, primary_key = True)
     details = db.Column(db.Text)
-    created_at = db.Column(db.DateTime, server_default = db.func.now())
-    updated_at = db.Column(db.DateTime, onupdate = db.func.now())
     customer_id = db.Column(db.Integer, db.ForeignKey('customers.id'))
     farmer_id = db.Column(db.Integer, db.ForeignKey('farmers.id'))
+    created_at = db.Column(db.DateTime, server_default = db.func.now())
+    updated_at = db.Column(db.DateTime, onupdate = db.func.now())
