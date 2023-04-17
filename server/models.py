@@ -20,9 +20,11 @@ class Customer(db.Model, SerializerMixin):
 
     @validates('payment_method')
     def validates_pay(self, key, payment_method):
-        if len(payment_method) != 16:
+        payment_method_str = str(payment_method)
+        if len(payment_method_str) != 16:
             raise ValueError('Card number must be 16 digits')
         return payment_method
+    
 
 class Farmer(db.Model, SerializerMixin):
     __tablename__ = 'farmers'
