@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "./Farmer.css"
 
 function Farmers() {
   const [farmers, setFarmers] = useState([]);
