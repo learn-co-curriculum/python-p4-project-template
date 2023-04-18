@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Farmer.css"
+import FarmerNavBar from './FarmerNavBar'
 
 function Farmers() {
   const [farmers, setFarmers] = useState([]);
@@ -12,6 +13,7 @@ function Farmers() {
 
   return (
     <div>
+      <FarmerNavBar/>
       {farmers.map((farmer) => (
         <div key={farmer.id}>
             Name: {farmer.name}

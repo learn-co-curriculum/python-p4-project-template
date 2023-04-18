@@ -1,6 +1,7 @@
 // import "./Customer.css"
 import React, { useState, useEffect } from 'react';
 import "./Customer.css"
+import CustomerNavBar from './CustomerNavBar'
 
 function Customer() {
   const [customers, setCustomer] = useState([]);
@@ -13,6 +14,7 @@ function Customer() {
 
   return (
     <div>
+        <CustomerNavBar/>
       {customers.map((customer) => (
         <div key={customer.id}>
             Name: {customer.name}
