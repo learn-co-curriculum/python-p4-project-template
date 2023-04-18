@@ -1,5 +1,6 @@
 import "./Home.css"
 import Fbutton from "./Fbutton"
+import Cbutton from "./Cbutton"
 function Homepage() {
     return(
         
@@ -10,6 +11,7 @@ function Homepage() {
             <br/>
             <br/>
             <Fbutton/>
+            <Cbutton/>
         </div>
     )
 }

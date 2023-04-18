@@ -8,15 +8,14 @@ import Customer from "./Customer"
 // const Home = () => <h1>Home Page</h1>;
 
 function App() {
-  const url = "http://localhost:4000"
-  const farmer_url = url + "/farmers"
+
   return (
     <Router> 
       <Switch>
         <Route path="/farmers">
           <Farmers />
         </Route>
-        <Route path="/customer">
+        <Route path="/customers">
           <Customer />
         </Route>
         <Route path="/">
