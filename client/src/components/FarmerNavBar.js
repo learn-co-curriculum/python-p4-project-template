@@ -4,7 +4,9 @@ import './FarmerNavBar.css'
 
 
 
-function NavBar () {
+function FarmerNavBar({ farmerId }) {
+
+  const profileUrl = `/farmers/${farmerId}`
 
     return (
     <nav>
@@ -13,7 +15,7 @@ function NavBar () {
         <NavLink to="/">Logout</NavLink>
         </li>
         <li className="hover-underline-animation">
-        <NavLink to="/farmers/<int:id>">Profile</NavLink>
+        <NavLink to={profileUrl}>Profile</NavLink>
         </li>
         <li className="hover-underline-animation">
         <NavLink to="/">My Orders</NavLink>
@@ -24,4 +26,4 @@ function NavBar () {
 
 }
 
-export default NavBar;
+export default FarmerNavBar;

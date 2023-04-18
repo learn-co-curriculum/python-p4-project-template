@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import './CustomerNavBar.css'
 
 
-function NavBar () {
+function CustomerNavBar() {
 
     return (
     <nav>
@@ -12,7 +12,7 @@ function NavBar () {
         <NavLink to="/">Logout</NavLink>
         </li>
         <li className="hover-underline-animation">
-        <NavLink to="/farmers">View Farmers</NavLink>
+        <NavLink to="/customer/farmers">View Farmers</NavLink>
         </li>
         <li className="hover-underline-animation">
         <NavLink to="/">My Orders</NavLink>
@@ -23,4 +23,4 @@ function NavBar () {
 
 }
 
-export default NavBar;
+export default CustomerNavBar;
