@@ -32,6 +32,7 @@ class Farmer(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String, unique=True, nullable=False)
     location = db.Column(db.String)
+    imgSrc = db.Column(db.String, unique=True, nullable=False)
 
     orders = db.relationship('Order', backref = 'farmer')
     customers = association_proxy('orders', 'customer')

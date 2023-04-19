@@ -1,8 +1,8 @@
-"""steve can do this
+"""source
 
-Revision ID: e18f7ed7d18a
+Revision ID: d958f9ce9931
 Revises: 
-Create Date: 2023-04-17 11:32:22.067023
+Create Date: 2023-04-19 11:48:18.940454
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'e18f7ed7d18a'
+revision = 'd958f9ce9931'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -29,16 +29,18 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('name', sa.String(), nullable=False),
     sa.Column('location', sa.String(), nullable=True),
+    sa.Column('imgSrc', sa.String(), nullable=False),
     sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('imgSrc'),
     sa.UniqueConstraint('name')
     )
     op.create_table('orders',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('details', sa.Text(), nullable=True),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
-    sa.Column('updated_at', sa.DateTime(), nullable=True),
     sa.Column('customer_id', sa.Integer(), nullable=True),
     sa.Column('farmer_id', sa.Integer(), nullable=True),
+    sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
+    sa.Column('updated_at', sa.DateTime(), nullable=True),
     sa.ForeignKeyConstraint(['customer_id'], ['customers.id'], name=op.f('fk_orders_customer_id_customers')),
     sa.ForeignKeyConstraint(['farmer_id'], ['farmers.id'], name=op.f('fk_orders_farmer_id_farmers')),
     sa.PrimaryKeyConstraint('id')

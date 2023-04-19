@@ -30,9 +30,9 @@ def make_this():
     c = [c1,c2,c3,c4]
 
 
-    f1 = Farmer(name = 'Dwight', location = 'Shrute Farms, Scranton')
-    f2 = Farmer(name = 'Steve Austin', location = 'Broken Skull Ranch, Nevada')
-    f3 = Farmer(name = 'Randy', location = 'South Park, Colorado')
+    f1 = Farmer(name = 'Dwight', location = 'Shrute Farms, Scranton', imgSrc = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNtMclQDwaNt9JTNcW5ADzCN20Z-zyj3PkHw&usqp=CAU')
+    f2 = Farmer(name = 'Steve Austin', location = 'Broken Skull Ranch, Nevada', imgSrc = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGwCKad0l531BuZCB4o_38ggUsjUrn3KSDuRRJwztZZXmegVwygJb6_l3hlK3Ke_yNUUg&usqp=CAU')
+    f3 = Farmer(name = 'Randy', location = 'South Park, Colorado', imgSrc = 'https://tinybeans.com/wp-content/uploads/2021/08/liberty-hill-farm.png?w=640')
 
     f = [f1,f2,f3]
 
