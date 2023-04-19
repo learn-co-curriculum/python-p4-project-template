@@ -23,7 +23,16 @@ function FarmerOrders() {
     }
   }, [farmerName]);
 
-  
+  const handleDeleteOrder = (orderId) => {
+    fetch(`http://127.0.0.1:5555/orders/${orderId}`, {
+      method: 'DELETE'
+    })
+    .then(() => {
+      const newOrders = orders.filter((order) => order.id !== orderId);
+      setOrders(newOrders);
+    })
+    .catch((error) => console.error(error));
+  }
 
   return (
     <div>
@@ -34,7 +43,9 @@ function FarmerOrders() {
           {orders.map((order) => (
             <div key={order.id}>
                 <p>
+                Customer: {order.customer.name} | 
                 Item: {order.details}
+                <button onClick={handleDeleteOrder}>Delete</button>
                 </p>
             </div>
           ))}
