@@ -2,11 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import "./Farmer.css"
 import FarmerNavBar from './FarmerNavBar'
+import OrderCard from './OrderCard'
 
 function FarmerOrders() {
   const [orders, setOrders] = useState([]);
   const location = useLocation();
   const farmerName = location.state?.farmerName;
+//   const orderComponents = orders.map( orderObj => {
+//     return <OrderCard key={ orderObj.name } order={ orderObj } />
+// } )
 
   useEffect(() => {
     if (farmerName) {
@@ -38,6 +42,9 @@ function FarmerOrders() {
           ) : (
             <h2>Please log in first</h2>
         )}
+      {/* <div className="ui grid container">
+            { orderComponents }
+      </div> */}
     </div>
   );
 }
