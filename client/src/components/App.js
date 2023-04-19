@@ -7,6 +7,8 @@ import FarmerLogin from './FarmerLogin';
 import FarmerOrders from './FarmerOrders';
 import FarmerProfile from './FarmerProfile'
 import Signin from './Signin';
+import CustomerLogin from './CustomerLogin';
+import CustomerPage from './CustomerPage';
 
 // Components for each route
 // const Home = () => <h1>Home Page</h1>;
@@ -16,12 +18,12 @@ function App() {
   return (
     <Router> 
       <Switch>
+        <Route path="/customers/orders">
+          <CustomerPage />
+        </Route>
         <Route path="/farmers/orders">
           <FarmerOrders />
         </Route>
-        {/* <Route path="/farmers/profile">
-          <FarmerProfile />
-        </Route> */}
         <Route path="/farmers/login">
           <FarmerLogin />
         </Route>
@@ -29,7 +31,7 @@ function App() {
           <Farmers />
         </Route>
         <Route path="/customers">
-          <Customer />
+          <CustomerLogin />
         </Route>
         <Route path="/signin">
           <Signin />
