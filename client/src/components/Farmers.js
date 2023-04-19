@@ -13,7 +13,7 @@ function Farmers() {
       fetch('http://127.0.0.1:5555/orders')
         .then((response) => response.json())
         .then((data) => {
-          const farmerOrders = data.filter((order) => order.farmer === farmerName);
+          const farmerOrders = data.filter((order) => order.farmer.name === farmerName);
           setOrders(farmerOrders);
         });
     }
@@ -29,7 +29,6 @@ function Farmers() {
             <div key={order.id}>
                 <p>
                 Item: {order.details}
-                    --Quantity: {order.quantity}
                 </p>
             </div>
           ))}
