@@ -14,7 +14,10 @@ function FarmerLogin() {
       .then((data) => {
         const foundFarmer = data.find((farmer) => farmer.name === name);
         if (foundFarmer) {
-          history.push('/farmers');
+          history.push({
+            pathname: '/farmers',
+            state: { farmerName: foundFarmer.name }
+          });
         } else {
           alert('Invalid farmer name');
         }
