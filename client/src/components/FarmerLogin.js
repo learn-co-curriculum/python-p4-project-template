@@ -15,7 +15,7 @@ function FarmerLogin() {
         const foundFarmer = data.find((farmer) => farmer.name === name);
         if (foundFarmer) {
           history.push({
-            pathname: '/farmers',
+            pathname: '/farmers/orders',
             state: { farmerName: foundFarmer.name }
           });
         } else {

@@ -10,10 +10,11 @@ function FarmerOrders() {
 
   useEffect(() => {
     if (farmerName) {
-      fetch(`http://127.0.0.1:5555/orders?farmer=${farmerName}`)
+      fetch('http://127.0.0.1:5555/orders')
         .then((response) => response.json())
         .then((data) => {
-          setOrders(data);
+          const farmerOrders = data.filter((order) => order.farmer.name === farmerName);
+          setOrders(farmerOrders);
         });
     }
   }, [farmerName]);
