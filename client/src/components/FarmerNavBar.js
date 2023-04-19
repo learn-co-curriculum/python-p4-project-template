@@ -15,10 +15,10 @@ function FarmerNavBar({ farmerId }) {
         <NavLink to="/">Logout</NavLink>
         </li>
         <li className="hover-underline-animation">
-        <NavLink to={profileUrl}>Profile</NavLink>
+        <NavLink to="/farmers/profile">Profile</NavLink>
         </li>
         <li className="hover-underline-animation">
-        <NavLink to="/">My Orders</NavLink>
+        <NavLink to="/farmers/orders">My Orders</NavLink>
         </li>
       </ul>
     </nav>

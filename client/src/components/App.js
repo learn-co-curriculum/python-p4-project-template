@@ -4,6 +4,8 @@ import Farmers from './Farmers'
 import Home from "./Home"
 import Customer from "./Customer"
 import FarmerLogin from './FarmerLogin';
+import FarmerOrders from './FarmerOrders';
+import FarmerProfile from './FarmerProfile'
 
 // Components for each route
 // const Home = () => <h1>Home Page</h1>;
@@ -13,6 +15,12 @@ function App() {
   return (
     <Router> 
       <Switch>
+        <Route path="/farmers/orders">
+          <FarmerOrders />
+        </Route>
+        {/* <Route path="/farmers/profile">
+          <FarmerProfile />
+        </Route> */}
         <Route path="/farmers/login">
           <FarmerLogin />
         </Route>
