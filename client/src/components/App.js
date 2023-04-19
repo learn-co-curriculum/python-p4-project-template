@@ -5,6 +5,7 @@ import Home from "./Home"
 import Customer from "./Customer"
 import FarmerLogin from './FarmerLogin';
 import FarmerOrders from './FarmerOrders';
+import NavBar from "./NavBar"
 import FarmerProfile from './FarmerProfile'
 
 // Components for each route
@@ -13,7 +14,8 @@ import FarmerProfile from './FarmerProfile'
 function App() {
 
   return (
-    <Router> 
+    <Router>
+      <NavBar /> 
       <Switch>
         <Route path="/farmers/orders">
           <FarmerOrders />
