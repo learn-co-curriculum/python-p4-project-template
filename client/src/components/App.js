@@ -6,6 +6,7 @@ import Customer from "./Customer"
 import FarmerLogin from './FarmerLogin';
 import FarmerOrders from './FarmerOrders';
 import FarmerProfile from './FarmerProfile'
+import Signin from './Signin';
 
 // Components for each route
 // const Home = () => <h1>Home Page</h1>;
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path="/customers">
           <Customer />
+        </Route>
+        <Route path="/signin">
+          <Signin />
         </Route>
         <Route path="/">
           <Home />

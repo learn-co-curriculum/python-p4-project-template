@@ -29,8 +29,6 @@ function Homepage() {
                     --Farm: <img src={farmer.imgSrc}/>
                 </p>
                 </div>))}
-            <Fbutton/>
-            <Cbutton/>
         </div>
     )
 }

@@ -25,14 +25,14 @@ function NavBar() {
                 Home
             </NavLink>
             <NavLink
-                to="/farmers"
+                to="/signin"
                 exact
                 style={linkStyles}
                 activeStyle={{
                 background: "maroon",
                 }}
             >
-                Farms
+                Sign In
             </NavLink>
         </div>
   );
