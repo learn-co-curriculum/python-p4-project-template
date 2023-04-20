@@ -2,14 +2,14 @@ import React from 'react';
 
 import "./Farmer.css"
 
-function OrderForm({setOrders, farmers, orders, customerId, setShowForm, showForm}) {
-    const updateOrder = (event, id) => {
+function OrderForm({setOrders, farmers, orders, customerId, setShowForm, showForm, orderId}) {
+    const updateOrder = (event) => {
         event.preventDefault();
         const details = event.target.details.value
         const farmer_id = event.target.farmer_id.value
         
-       
-        fetch(`http://127.0.0.1:5555/orders/${parseInt(customerId)}`,{
+
+        fetch(`http://127.0.0.1:5555/orders/${parseInt(orderId)}`,{
           method: 'PATCH',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -26,7 +26,7 @@ function OrderForm({setOrders, farmers, orders, customerId, setShowForm, showFor
         })
       }
   return (
-    
+        
         <form onSubmit={updateOrder}>
             <label htmlFor="details">Details:</label>
             <input type="text" id="details" name="details" />

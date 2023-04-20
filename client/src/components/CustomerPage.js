@@ -93,6 +93,7 @@ function CustomerPage() {
                 <button onClick={handleEditClick}>Edit Order</button>
               </p>
               {showForm ? <OrderForm 
+          orderId = {order.id}
           orders={orders} 
           farmers = {farmers} 
           setOrders={setOrders}
