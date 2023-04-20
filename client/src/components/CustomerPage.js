@@ -63,15 +63,6 @@ function CustomerPage() {
   };
   const handleEditClick = () => { 
     setShowForm((showForm) => !showForm);
-    // return (
-    //   <div>
-    //     <OrderForm 
-    //       orders={orders} 
-    //       farmers = {farmers} 
-    //       setFarmers={setFarmers}
-    //       customerId={customerId}
-    //     />
-    //   </div>
     }
   return (
     <div>
@@ -106,6 +97,8 @@ function CustomerPage() {
           farmers = {farmers} 
           setOrders={setOrders}
           customerId={customerId}
+          setShowForm= {setShowForm}
+          showForm={showForm}
         />: null}
             </div>
           ))}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import "./Farmer.css"
 
-function OrderForm({setOrders, farmers, orders, customerId}) {
+function OrderForm({setOrders, farmers, orders, customerId, setShowForm, showForm}) {
     const updateOrder = (event, id) => {
         event.preventDefault();
         const details = event.target.details.value
@@ -21,7 +21,8 @@ function OrderForm({setOrders, farmers, orders, customerId}) {
         })
         .then(response => response.json())
         .then (data=> {
-          setOrders(orders,data)
+          setOrders(orders, data)
+          setShowForm(!showForm)
         })
       }
   return (
