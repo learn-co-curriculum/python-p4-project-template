@@ -8,6 +8,7 @@ function CustomerPage() {
   const [farmers, setFarmers] = useState([]);
   const location = useLocation();
   const customerName = location.state?.customerName;
+  const customerId = location.state?.customerId;
 
   useEffect(() => {
     if (customerName) {
@@ -37,9 +38,8 @@ function CustomerPage() {
   const addOrder = (event) => {
     event.preventDefault();
     const details = event.target.details.value;
-    const customer_id = event.target.customer_id.value;
     const farmer_id = event.target.farmer_id.value;
-  
+
     fetch('http://127.0.0.1:5555/orders', {
       method: 'POST',
       headers: {
@@ -47,14 +47,13 @@ function CustomerPage() {
       },
       body: JSON.stringify({
         details: details,
-        customer_id: customer_id,
+        customer_id: customerId,
         farmer_id: farmer_id
       }),
     })
       .then((response) => response.json())
       .then((data) => {
         setOrders([...orders, data]);
-        console.log(customerName.id)
       });
 
     event.target.reset();
@@ -63,7 +62,8 @@ function CustomerPage() {
   return (
     <div>
       <FarmerNavBar 
-      customerName={customerName}/>
+      customerName={customerName}
+      customerId={customerId}/>
       {customerName ? (
         <>
           <h2>Profile for {customerName}</h2>
@@ -78,7 +78,6 @@ function CustomerPage() {
                 </option>
               ))}
             </select>
-            <input type="hidden" id="customer_id" name="customer_id" value={location.state?.customer_id} />
             <button type="submit">Add Order</button>
           </form>
           {orders.map((order) => (

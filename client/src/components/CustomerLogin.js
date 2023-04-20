@@ -16,7 +16,10 @@ function CustomerLogin() {
         if (foundCustomer) {
           history.push({
             pathname: '/customers/orders',
-            state: { customerName: foundCustomer.name }
+            state: { 
+              customerId: foundCustomer.id,
+              customerName: foundCustomer.name 
+            }
           });
         } else {
           alert('Invalid customer name');
