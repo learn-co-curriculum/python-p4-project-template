@@ -10,6 +10,7 @@ from flask_restful import Resource
 from config import app, db, api
 from models import Farmer, Order, Customer
 
+
 # Views go here!
 class Farmers(Resource):
     def get(self):
