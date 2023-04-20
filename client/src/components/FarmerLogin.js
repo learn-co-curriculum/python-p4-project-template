@@ -15,7 +15,10 @@ function FarmerLogin() {
         if (foundFarmer) {
           history.push({
             pathname: '/farmers/orders',
-            state: { farmerName: foundFarmer.name }
+            state: { 
+              farmerName: foundFarmer.name,
+              farmerId: foundFarmer.id
+            }
           });
         } else {
           alert('Invalid farmer name');

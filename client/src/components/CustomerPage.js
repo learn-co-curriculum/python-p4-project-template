@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import "./Farmer.css"
 import FarmerNavBar from './FarmerNavBar'
+import OrderForm from './OrderForm'
 
 function CustomerPage() {
   const [orders, setOrders] = useState([]);
   const [farmers, setFarmers] = useState([]);
+  const [showForm, setShowForm] = useState(false);
   const location = useLocation();
   const customerName = location.state?.customerName;
   const customerId = location.state?.customerId;
@@ -34,6 +36,7 @@ function CustomerPage() {
       setOrders(orders.filter((order) => order.id !== id));
     });
   };
+  
 
   const addOrder = (event) => {
     event.preventDefault();
@@ -58,7 +61,18 @@ function CustomerPage() {
 
     event.target.reset();
   };
-
+  const handleEditClick = () => { 
+    setShowForm((showForm) => !showForm);
+    // return (
+    //   <div>
+    //     <OrderForm 
+    //       orders={orders} 
+    //       farmers = {farmers} 
+    //       setFarmers={setFarmers}
+    //       customerId={customerId}
+    //     />
+    //   </div>
+    }
   return (
     <div>
       <FarmerNavBar 
@@ -85,7 +99,14 @@ function CustomerPage() {
               <p>
                 Item: {order.details} -- Farmer: {order.farmer.name}
                 <button onClick={() => deleteOrder(order.id)}>Delete</button>
+                <button onClick={handleEditClick}>Edit Order</button>
               </p>
+              {showForm ? <OrderForm 
+          orders={orders} 
+          farmers = {farmers} 
+          setOrders={setOrders}
+          customerId={customerId}
+        />: null}
             </div>
           ))}
         </>
