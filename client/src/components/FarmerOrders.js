@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import "./Farmer.css"
 import FarmerNavBar from './FarmerNavBar'
-import OrderCard from './OrderCard'
+import OrderForm from './OrderForm'
 
 function FarmerOrders() {
   const [orders, setOrders] = useState([]);
+  const [customers, setCustomers] = useState([]);
   const location = useLocation();
   const farmerName = location.state?.farmerName;
+  const farmerId = location.state?.farmerId;
 //   const orderComponents = orders.map( orderObj => {
 //     return <OrderCard key={ orderObj.name } order={ orderObj } />
 // } )
@@ -23,16 +25,13 @@ function FarmerOrders() {
     }
   }, [farmerName]);
 
-  const handleDeleteOrder = (orderId) => {
-    fetch(`http://127.0.0.1:5555/orders/${orderId}`, {
-      method: 'DELETE'
-    })
-    .then(() => {
-      const newOrders = orders.filter((order) => order.id !== orderId);
-      setOrders(newOrders);
-    })
-    .catch((error) => console.error(error));
-  }
+  const deleteOrder = (id) => {
+    fetch(`http://127.0.0.1:5555/orders/${id}`, {
+      method: 'DELETE',
+    }).then(() => {
+      setOrders(orders.filter((order) => order.id !== id));
+    });
+  };
 
   return (
     <div>
@@ -44,8 +43,9 @@ function FarmerOrders() {
             <div key={order.id}>
                 <p>
                 Customer: {order.customer.name} | 
-                Item: {order.details}
-                <button onClick={handleDeleteOrder}>Delete</button>
+                Item: {order.details} | 
+                Card#: {order.customer.payment_method}
+                <button onClick={() => deleteOrder(order.id)}>Ship Order</button>
                 </p>
             </div>
           ))}
