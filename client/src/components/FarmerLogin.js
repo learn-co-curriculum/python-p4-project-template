@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import "./Home.css"
+
 function FarmerLogin() {
   const [name, setName] = useState('');
   const history = useHistory();
+  const [showForm, setShowForm] = useState(false);
+  const [newFarmerName, setNewFarmerName] = useState('');
+  const [newFarmerLocation, setNewFarmerLocation] = useState('');
+  const [newFarmerImgSrc, setNewFarmerImgSrc] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -26,6 +31,34 @@ function FarmerLogin() {
       });
   }
 
+  const handleNewFarmerSubmit = (event) => {
+    event.preventDefault();
+
+    fetch('http://127.0.0.1:5555/farmers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: newFarmerName,
+        location: newFarmerLocation,
+        imgSrc: newFarmerImgSrc
+      })
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        alert(`Farmer ${data.name} added successfully!`);
+        setNewFarmerName('');
+        setNewFarmerLocation('');
+        setNewFarmerImgSrc('');
+        setShowForm(false);
+      });
+  }
+
+  const handleNewFarmerCancel = () => {
+    setShowForm(false);
+  }
+
   return(
     <div className="header">
       <h1 className="welcome">WELCOME!</h1>
@@ -33,7 +66,18 @@ function FarmerLogin() {
         <input className="fc" type="text" placeholder="Sign In" value={name} onChange={(e) => setName(e.target.value)} />
         <button type="submit">Submit</button>
       </form>
-      <div className="drop-down-form">Create an account</div>
+      <div className="drop-down-form">
+        <button onClick={() => setShowForm(!showForm)}>Create an account</button>
+        {showForm && (
+          <form onSubmit={handleNewFarmerSubmit}>
+            <input type="text" placeholder="Name" value={newFarmerName} onChange={(e) => setNewFarmerName(e.target.value)} />
+            <input type="text" placeholder="Location" value={newFarmerLocation} onChange={(e) => setNewFarmerLocation(e.target.value)} />
+            <input type="text" placeholder="Image Source" value={newFarmerImgSrc} onChange={(e) => setNewFarmerImgSrc(e.target.value)} />
+            <button type="submit">Submit</button>
+            <button type="button" onClick={handleNewFarmerCancel}>Cancel</button>
+          </form>
+        )}
+      </div>
     </div>
   )
 }

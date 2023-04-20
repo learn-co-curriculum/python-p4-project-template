@@ -30,9 +30,9 @@ class Farmer(db.Model, SerializerMixin):
     __tablename__ = 'farmers'
     serialize_rules = ('-orders', '-customers')
     id = db.Column(db.Integer, primary_key = True)
-    name = db.Column(db.String, unique=True, nullable=False)
+    name = db.Column(db.String)
     location = db.Column(db.String)
-    imgSrc = db.Column(db.String, unique=True, nullable=False)
+    imgSrc = db.Column(db.String)
 
     orders = db.relationship('Order', backref = 'farmer')
     customers = association_proxy('orders', 'customer')

@@ -24,6 +24,7 @@ class Farmers(Resource):
         newFarmer = Farmer(
             name= data["name"],
             location = data["location"],
+            imgSrc = data["imgSrc"]
             )
         try:
             db.session.add(newFarmer)
