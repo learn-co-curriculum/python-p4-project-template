@@ -3,28 +3,33 @@ import React from 'react';
 import "./Farmer.css"
 
 function OrderForm({setOrders, farmers, orders, customerId, setShowForm, showForm, orderId}) {
-    const updateOrder = (event) => {
-        event.preventDefault();
-        const details = event.target.details.value
-        const farmer_id = event.target.farmer_id.value
-        
-
-        fetch(`http://127.0.0.1:5555/orders/${parseInt(orderId)}`,{
-          method: 'PATCH',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({
-            details: details,
-            customer_id: customerId,
-            farmer_id: farmer_id
+  const updateOrder = (event) => {
+    event.preventDefault();
+    const details = event.target.details.value;
+    const farmer_id = event.target.farmer_id.value;
     
-          }),
-        })
-        .then(response => response.json())
-        .then (data=> {
-          setOrders(orders, data)
-          setShowForm(!showForm)
-        })
-      }
+    fetch(`http://127.0.0.1:5555/orders/${parseInt(orderId)}`,{
+      method: 'PATCH',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        details: details,
+        customer_id: customerId,
+        farmer_id: farmer_id
+      }),
+    })
+    .then(response => response.json())
+    .then(data => {
+      const updatedOrders = orders.map(order => {
+        if (order.id === data.id) {
+          return data;
+        } else {
+          return order;
+        }
+      });
+      setOrders(updatedOrders);
+      setShowForm(false);
+    });
+  };
   return (
         
         <form onSubmit={updateOrder}>
