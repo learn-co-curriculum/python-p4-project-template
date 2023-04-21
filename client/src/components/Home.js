@@ -17,7 +17,7 @@ function Homepage() {
     return(
         <div className="header">
             <NavBar />
-            <h1 className="welcome">WELCOME!</h1>
+            <h1 className="welcome">Welcome to Fresh Picks!</h1>
             <h2 className= "fc">Here's a list of our very own farmers! Press Sign In to get started!</h2>
             <div className="card-container">
               {farmers.map((farmer) => (

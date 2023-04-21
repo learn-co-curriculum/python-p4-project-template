@@ -66,7 +66,7 @@ function FarmerLogin() {
         <input className="fc" type="text" placeholder="Sign In" value={name} onChange={(e) => setName(e.target.value)} />
         <button className="farm-button"type="submit">Submit</button>
       </form>
-      <div className="drop-down-form" onClick={() => setShowForm(true)}>Become a new customer</div>
+      <div className="drop-down-form" onClick={() => setShowForm(true)}>Become a Farmer</div>
         {showForm && (
           <form onSubmit={handleNewFarmerSubmit}>
             <input type="text" placeholder="Name" value={newFarmerName} onChange={(e) => setNewFarmerName(e.target.value)} />
