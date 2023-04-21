@@ -1,0 +1,50 @@
+.signin-container {
+  background-color: #f5e5d1; /* Cream */
+  height: 100vh;
+}
+
+.signin-title {
+  font-family: 'Old Standard TT', serif;
+  font-size: 3rem;
+  color: #71481c; /* Dark Brown */
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 5rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.farm-button {
+  background-color: #71481c; /* Dark Brown */
+  color: #FFF;
+  font-size: 1.5rem;
+  padding: 0.75rem 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.farm-button:hover {
+  background-color: #8E6E49; /* Darker brown */
+}
+
+.country-button {
+  background-color: #71481c; /* Dark Brown */
+  color: #FFF;
+  font-size: 1.5rem;
+  padding: 0.75rem 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.country-button:hover {
+  background-color: #8E6E49; /* Darker brown */
+}
+
+.buttons-container {
+  text-align: center;
+}

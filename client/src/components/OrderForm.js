@@ -1,7 +1,5 @@
 import React from 'react';
 
-import "./Farmer.css"
-
 function OrderForm({setOrders, farmers, orders, customerId, setShowForm, showForm, orderId}) {
   const updateOrder = (event) => {
     event.preventDefault();

@@ -1,11 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Farmers from './Farmers'
 import Home from "./Home"
-import Customer from "./Customer"
 import FarmerLogin from './FarmerLogin';
 import FarmerOrders from './FarmerOrders';
-import FarmerProfile from './FarmerProfile'
 import Signin from './Signin';
 import CustomerLogin from './CustomerLogin';
 import CustomerPage from './CustomerPage';
@@ -26,9 +23,6 @@ function App() {
         </Route>
         <Route path="/farmers/login">
           <FarmerLogin />
-        </Route>
-        <Route path="/farmers">
-          <Farmers />
         </Route>
         <Route path="/customers">
           <CustomerLogin />

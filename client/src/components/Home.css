@@ -1,4 +1,73 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://cdn.wallpapersafari.com/67/99/HPwFns.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #fff;
+}
 
-h2 {
-    text-align: center;
+.welcome {
+  font-size: 5rem;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  text-shadow: 2px 2px #6b3e1d;
+  margin: 2rem 0;
+}
+
+.fc {
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px #6b3e1d;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f0e7d8;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5c6a0;
+  border: 1px solid #6b3e1d;
+  box-shadow: 2px 2px 6px #6b3e1d;
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 300px;
+}
+
+.card h3 {
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: #6b3e1d;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px #fff;
+}
+
+.card p {
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  color: #6b3e1d;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px #fff;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #6b3e1d;
+  box-shadow: 2px 2px 6px #6b3e1d;
 }

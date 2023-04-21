@@ -1,6 +1,4 @@
 import "./Home.css"
-import Fbutton from "./Fbutton"
-import Cbutton from "./Cbutton"
 import NavBar from "./NavBar"
 import React, {useState, useEffect} from "react"
 
@@ -20,15 +18,16 @@ function Homepage() {
         <div className="header">
             <NavBar />
             <h1 className="welcome">WELCOME!</h1>
-            <h2 className= "fc">Are you a farmer or customer?</h2>
-            {farmers.map((farmer) => (
-                <div key={farmer.id}>
-                    Name: {farmer.name}
-                <p>
-                    {/* --Location: {customer.address} */}
-                    --Farm: <img src={farmer.imgSrc}/>
-                </p>
-                </div>))}
+            <h2 className= "fc">Here's a list of our very own farmers! Press Sign In to get started!</h2>
+            <div className="card-container">
+              {farmers.map((farmer) => (
+                  <div key={farmer.id} className="card">
+                      <h3>{farmer.name}</h3>
+                      <p>Location: {farmer.location}</p>
+                      <img src={farmer.imgSrc} alt="Farm"/>
+                  </div>
+              ))}
+            </div>
         </div>
     )
 }

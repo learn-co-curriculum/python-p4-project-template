@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import "./Farmer.css"
 import FarmerNavBar from './FarmerNavBar'
-import OrderForm from './OrderForm'
+// import OrderForm from './OrderForm'
 
 function FarmerOrders() {
   const [orders, setOrders] = useState([]);
-  const [customers, setCustomers] = useState([]);
+  // const [customers, setCustomers] = useState([]);
   const location = useLocation();
   const farmerName = location.state?.farmerName;
-  const farmerId = location.state?.farmerId;
+  // const farmerId = location.state?.farmerId;
 //   const orderComponents = orders.map( orderObj => {
 //     return <OrderCard key={ orderObj.name } order={ orderObj } />
 // } )
