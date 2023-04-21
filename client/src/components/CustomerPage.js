@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import FarmerNavBar from './FarmerNavBar'
 import OrderForm from './OrderForm'
+import "./CustomerPage.css"
 
 function CustomerPage() {
   const [orders, setOrders] = useState([]);

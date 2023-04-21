@@ -1,0 +1,102 @@
+body {
+    background-color: #f5deb3;
+    font-family: 'Georgia', serif;
+  }
+  
+  /* Style for the header of the page */
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px #000;
+  }
+  
+  /* Style for the form inputs and labels */
+  label, input[type="text"], select {
+    display: block;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-family: 'Georgia', serif;
+  }
+  
+  /* Style for the buttons */
+  button {
+    background-color: #8B4513;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 2px 2px #000;
+  }
+  
+  button:hover {
+    background-color: #A0522D;
+  }
+  
+  /* Style for the order items */
+  p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-family: 'Georgia', serif;
+  }
+  
+  /* Style for the delete and edit buttons */
+  button:nth-of-type(1) {
+    background-color: #ff0000;
+    margin-left: 1rem;
+  }
+  
+  button:nth-of-type(2) {
+    background-color: #008CBA;
+    margin-left: 1rem;
+  }
+  
+  /* Style for the overall page container */
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  /* Style for the navigation bar */
+  nav {
+    background-color: #F4A460;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 2px 2px #000;
+  }
+  
+  nav h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin-right: 1rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #000;
+  }
