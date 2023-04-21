@@ -71,3 +71,67 @@
   border: 1px solid #6b3e1d;
   box-shadow: 2px 2px 6px #6b3e1d;
 }
+
+/* Customer Login Stuff */
+
+.drop-down-form {
+  background-color: #f6e6c7;
+  border: 1px solid #a1885d;
+  border-radius: 5px;
+  color: #a1885d;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 250px;
+}
+
+.drop-down-form:hover {
+  background-color: #a1885d;
+  color: #f6e6c7;
+}
+
+/* Style for the new customer form */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+form input {
+  background-color: #f6e6c7;
+  border: 1px solid #a1885d;
+  border-radius: 5px;
+  color: #a1885d;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+form button[type="submit"], form button[type="button"] {
+  background-color: #a1885d;
+  border: none;
+  border-radius: 5px;
+  color: #f6e6c7;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+form button[type="submit"]:hover, form button[type="button"]:hover {
+  background-color: #f6e6c7;
+  color: #a1885d;
+}
+
+form button[type="submit"]:focus, form button[type="button"]:focus {
+  outline: none;
+}
+
+form button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
