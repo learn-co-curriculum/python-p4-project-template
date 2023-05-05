@@ -233,7 +233,7 @@ Now let's review that last line...
 
 #### CORS
 
-CORS (Cross-Origin Reference Sharing) is a system that uses HTTP headers to
+CORS (Cross-Origin Resource Sharing) is a system that uses HTTP headers to
 determine whether resources from different servers-of-origin can be accessed.
 If you're using the fetch API to connect your frontend to your Flask backend,
 you need to configure CORS on your Flask application instance. Lucky for us,
