@@ -18,8 +18,6 @@ $ # the -L argument limits the depth at which we look into the directory structu
 .
 ├── CONTRIBUTING.md
 ├── LICENSE.md
-├── Pipfile
-├── Pipfile.lock
 ├── README.md
 ├── client
 │   ├── README.md
@@ -106,6 +104,7 @@ Install any dependencies you know you'll need for your project, like SQLAlchemy
 and Alembic, before you begin. You can do this straight from the command line:
 
 ```console
+$ pipenv --python 3.8.13
 $ pipenv install flask flask-sqlalchemy flask-migrate sqlalchemy-serializer flask-restful flask-cors
 ```
 
