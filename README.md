@@ -76,7 +76,7 @@ move one level up with `cd ..` and run `mv python-p4-project-template
 
 `cd` back into your new directory and run `git init` to create a local git
 repository. Add all of your local files to version control with `git add --all`,
-then commit them with `git commit -m'initial commit`. (You can change the
+then commit them with `git commit -m'initial commit'`. (You can change the
 message here- this one is just a common choice.)
 
 Navigate to [GitHub](https://github.com). In the upper-right corner of the page,
