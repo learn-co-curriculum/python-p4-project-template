@@ -5,3 +5,489 @@
   --text: hsla(0, 0%, 100%, 0.88);
 }
 
+/* TimeLogList.css */
+
+.shift-pro-header {
+  color: white;
+  height: 30px;
+  width: 100px;
+}
+
+
+/* home css */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 150px;
+}
+
+/* Styling for the text content inside the home component */
+.home-content {
+  flex: 1; /* Takes necessary space but leaves room for image */
+  padding-right: 20px; /* Adds spacing between text and image */
+  margin-left: 200px;
+}
+
+.home-content h4, .home-content h3, .home-content h1 {
+  margin: 0.5em 0; /* Adds vertical spacing but not too much */
+}
+
+/* Styling for the call to action button */
+.home-content .button {
+  padding: 10px 20px;
+  background-color: #007BFF; /* A nice shade of blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-content .button:hover {
+  background-color: #366596; /* Darker shade on hover */
+}
+
+/* Styling for the image container to ensure it is properly sized */
+.home-image-container {
+  flex: 1; /* Allows the image container to take necessary space */
+  max-width: 600px; /* Limits the maximum width of the image */
+  display: flex; /* Enables flexbox for the image container */
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+}
+
+.home-image-container img {
+  width: 100%; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Rounds the corners */
+  margin-left: -300px;
+}
+/* * Home.css */ */
+.home-container .home-content h4 {
+    color: #3498db; /* Light blue color for h4 */
+}
+
+.home-container .home-content h3 {
+    color: #007BFF; /* Orange color for h3 */
+}
+
+.home-container .home-content h1 {
+    color: #000000; /* Green color for h1 */
+}
+
+/* NavBar.css - Unique styles for the NavBar component */
+nav {
+  background-color: #007BFF; /* Dark blue background */
+  padding: 5px 20px; /* Padding around the nav for better spacing */
+  width: 100%; /* Ensures the nav takes up the full width of the viewport */
+  position: fixed; /* Keeps the nav at the top of the page when scrolling */
+  top: 0; /* Aligns the nav to the top of the viewport */
+  left: 0; /* Aligns the nav to the left of the viewport */
+  z-index: 1000; /* Ensures the nav stays on top of other content */
+  box-sizing: border-box; /* Includes padding in the width calculation, ensuring it truly spans 100% */
+  display: flex; /* Enables flexbox properties */
+  justify-content: space-between; /* Distributes space between and around content items */
+  align-items: center; /* Aligns items vertically within the container */
+}
+
+nav ul {
+  margin-right:-500px;
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+  display: flex; /* Display items in a row */
+  justify-content: center; /* Center items horizontally within this container */
+  align-items: center; /* Align items vertically */
+  flex-grow: 1; /* Allows the ul to grow and take up space as needed */
+  /* Centers ul in nav when combined with margin-right auto */
+  /* margin-right: auto; Maintains center alignment and equal margins on both sides */
+}
+
+nav ul li {
+  margin: 0 15px; /* Horizontal spacing between items */
+}
+
+nav ul li a,
+.logout-button { /* Styling for links and the Logout component */
+ 
+  color: white; /* Text color */
+  text-decoration: none; /* No underline */
+  font-size: 16px;
+  padding: 8px 16px; /* Padding for clickable area */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover,
+.logout-button:hover { /* Hover effects */
+  background-color: #5994cf; /* Darker shade of blue on hover */
+}
+/* Register.css */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+}
+
+.register-form {
+  flex: 1; /* Takes up half of the container */
+  max-width: 500px; /* Maximum width of the form */
+  padding-right: 20px; /* Spacing between form and image */
+  margin-bottom: 15px; /* Adds space between form fields */
+}
+.register-form label {
+  display: block; /* Makes the label take the full width */
+  margin-bottom: 5px; /* Space between the label and the field */
+}
+.register-form input,
+.register-form select {
+  width: 100%; /* Full width of the form field */
+  padding: 8px; /* Padding inside the input/select */
+  box-sizing: border-box; /* Includes padding and border in the width */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 4px; /* Rounded borders */
+}
+.register-image-container {
+  flex: 1; /* Takes up the other half */
+  max-width: 600px; /* Maximum width of the image */
+}
+
+.register-image-container img {
+  width: 70%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
+}
+.register-form .error-message {
+  color: #ff6b6b; /* Red color for error messages */
+  font-size: 0.85em; /* Smaller font size for error messages */
+  margin-top: 5px; /* Space between field and error message */
+}
+.register-button {
+  background-color: #007BFF; /* Blue background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+.register-form h2 {
+  text-align: center;
+  color: #007BFF; /* Assuming a blue theme from your details */
+  margin-bottom: 20px;
+}
+/* Style for the time log list container */
+.time-log-list-container {
+  margin-top: 20px;
+}
+/* Login.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-form {
+  width: 50%; /* Adjust based on preference */
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 90px;
+}
+
+.login-image-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-image-container img {
+  max-width: 45%;
+  height: auto;
+}
+
+.login-form h2 {
+  text-align: center;
+  color: #007BFF; /* Assuming a blue theme */
+  margin-bottom: 20px;
+}
+
+.field-container {
+  margin-bottom: 10px;
+}
+
+.field-container input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box; /* Includes padding and border in the width */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* /TimeLogList.css */
+.time-log-list-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  margin-left: -10px;
+  width: 200px; /* Adjust width as needed */
+  background-color: #007BFF; /* Light blue background for sidebar */
+  padding: 50px 10px;
+  color: white; /* Text color for sidebar */
+  margin-top: 60px; /* Adjust this value based on desired vertical position */
+}
+
+.sidebar h2 {
+  color: white; /* White text for the header */
+  margin-bottom: 20px;
+}
+
+.sidebar button {
+  display: block; /* Make buttons full width */
+  background-color: #0056b3; /* Darker blue for buttons */
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar button:hover {
+  background-color: #003b7a; /* Even darker on hover */
+}
+
+/* General styles for admin dashboard content */
+.admin-dashboard-content {
+  text-align: left;
+  margin-top: 90px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1000px;
+  margin: 20px auto 100px; /* Increased bottom margin */
+  padding: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+   
+
+
+.parent-container {
+  position: relative; /* Essential for absolute positioning context */
+}
+/* Styles for the date picker */
+.calendar-dropdown {
+  position: absolute;
+    top: -40px; /* Moves it down from the top edge of the parent container */
+    right: 730px; /* Aligns it to the right edge of the parent container */
+  max-height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 210px 0 50px 20px; /* Top, Right, Bottom, Left margins to move it down and to the right */
+  padding: 10px; /* Just enough padding to provide space around the content */
+  background-color: #f4f4f4; /* Light grey background, change as needed */
+  border-radius: 8px; /* Styled rounded corners */
+  
+}
+
+.calendar-dropdown label {
+  font-size: 16px; /* Clear and readable font size */
+  color: #007BFF; /* Dark grey color for the text */
+  margin-bottom: 5px; /* Minimal space below the label to keep things tight */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.calendar-dropdown input[type="date"] {
+  width: 100%; /* Stretches to fit its container */
+  padding: 8px; /* Enough padding to make the input easy to interact with */
+  border: 1px solid #007BFF; /* Subtle border styling */
+  border-radius: 4px; /* Smoothed corners for the input field */
+  box-sizing: border-box; /* Ensures the padding and border are included in the element's size */
+}
+
+/* Styles for the time log table */
+.time-log-table {
+  width: 100%; /* Full width */
+  margin-left: 0px; /* Adjusted to ensure it's within the visible area */
+  margin-top: 250px; /* Add space above the table */
+  margin-bottom: 30px; /* Add space below the table if needed */
+  border-collapse: collapse;
+  table-layout: fixed;
+  background-color: #007BFF;
+  color: white;
+}
+
+.time-log-table td {
+  background-color: white; /* Sets the background color of the cells to white */
+  color: black; /* Sets the text color to black for contrast */
+  padding: 8px; /* Ensures consistent padding with the headers */
+  border: 1px solid #ddd; /* Consistent border with the headers */
+  text-align: left; /* Aligns the text to the left */
+}
+.time-log-table th, .time-log-table td {
+  border: 1px solid #ddd; /* Light borders for readability */
+  text-align: left; /* Text alignment */
+  padding: 8px; /* Consistent padding in all cells */
+  overflow: hidden; /* Prevents text from overflowing the cell */
+  text-overflow: ellipsis; /* Adds ellipsis (...) when text exceeds the cell width */
+  white-space: nowrap; /* Prevents text from wrapping to new lines */
+}
+
+/* Adjusting column widths if necessary */
+.time-log-table th:nth-child(1), .time-log-table td:nth-child(1) {
+  width: 15%; /* Width for the first column */
+}
+.time-log-table th:nth-child(2), .time-log-table td:nth-child(2),
+.time-log-table th:nth-child(3), .time-log-table td:nth-child(3) {
+  width: 10%; /* Width for the second and third columns */
+}
+
+/* Styles for delete button and log item */
+.delete-button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.time-log-item {
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.time-log-form-container {
+  margin-top: 20px;
+  max-height: 90px;
+}
+.create-entry-header {
+  position: absolute;
+  top: 90px; /* Positions the header down from the top of the parent */
+  left: 52%; /* Centers the header horizontally */
+  transform: translateX(-50%); /* Adjusts the centering to be perfect */
+  max-height: 70px;
+  font-size: 24px;  /* Large font size for clear visibility */
+  color: #007BFF;  /* Dark color for better readability */
+  text-align: center;  /* Center-aligns the text */
+  padding: 10px 20px;  /* Padding on top and bottom, and slightly more on the sides */
+  margin: 20px auto;  /* Vertical margin for spacing, auto horizontally centers the block */
+  background-color: #ffffff;  /* Light grey background to distinguish the header */
+  border-radius: 6px;  /* Rounded corners for a modern appearance */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  width: auto;  /* Allows the width to fit the content with some padding */
+  max-width: 90%;  /* Limits the maximum width to maintain layout consistency */
+}
+.button-container {
+  text-align: left; /* Aligns the button to the left of its container */
+}
+
+.plus-button {
+  margin-top: 60px;
+  margin-left: 100px;
+  background-color: #007BFF; /* Bright blue background */
+  color: white; /* White text for the plus sign */
+  font-size: 24px; /* Larger font size for better visibility */
+  padding: 10px 15px; /* Padding around the text to make the button larger */
+  border: none; /* No border for a cleaner look */
+  border-radius: 50%; /* Rounded shape for the button */
+  cursor: pointer; /* Pointer cursor on hover to indicate it's clickable */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow to add depth */
+}
+
+.plus-button:hover {
+  background-color: #0056b3; /* Darker blue when the button is hovered */
+}
+/* General styles for any table */
+.table-style {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Collapses the border lines between cells */
+  background-color: #f4f4f4; /* Light grey background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-top: 100px; /* Space above the table */
+  margin-bottom: 50px; /* Space below the table */
+  margin-left: 250px;
+}
+
+.view-timelogs-header {
+  margin-left: 500px;
+  width: 500px;
+    color: #007BFF; /* A deep blue to match other headers or important text */
+    font-size: 24px; /* Large enough to stand out but not overpower */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
+    text-align: center; /* Centers the header text within its container */
+    margin-top: 100px; /* Space above the header */
+    margin-bottom: 10px; /* Space below the header, adjust based on your layout */
+    padding: 10px 0; /* Padding above and below the text */
+    background-color: #f4f4f4; /* Light grey background to make the header pop out */
+    border-radius: 5px; /* Slightly rounded corners for a soft, modern look */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* Subtle shadow for depth */
+}
+.table-style th, .table-style td {
+  border: 1px solid #ccc; /* Light grey border */
+  padding: 8px; /* Padding inside cells */
+  text-align: left; /* Aligns text to the left */
+  color: #333; /* Dark grey text for readability */
+}
+
+.table-style th {
+  background-color: #007BFF; /* Blue background for headers */
+  color: white; /* White text in headers */
+}
+
+.table-style td {
+  background-color: white; /* White background for cells */
+}
+
+.table-style tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Slightly different background for odd rows for better readability */
+}
+
+.table-style tr:hover {
+  background-color: #ddd; /* Hover effect for rows */
+}
+
+/* Styles for buttons within the table */
+.table-style button {
+  padding: 5px 10px; /* Padding around button text */
+  margin-right: 5px; /* Space between buttons */
+  background-color: #007BFF; /* Blue background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Indicates the element is clickable */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.table-style button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
