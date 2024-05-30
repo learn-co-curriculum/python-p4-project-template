@@ -1,7 +1,176 @@
 :root {
-  --bg: #282c34;
-  --header: #fff;
-  --link: #61dafb;
-  --text: hsla(0, 0%, 100%, 0.88);
+    --bg: #101820;          /* Dark background for header and footer */
+    --header: #fff;         /* White header text */
+    --link: #001f3f;        /* Navy blue for header background */
+    --link-hover: #fff;     /* White for text color on hover */
+    --text: #333;           /* Main text color */
+    --text-light: #f4f4f4;  /* Light text color for header and footer */
+    --border: #ddd;         /* Border color for articles */
+    --bg-light: #fff;       /* Background for articles and main content */
+    --btn-bg: #0073e6;      /* Button background */
+    --btn-bg-hover: #005bb5; /* Button hover background */
 }
 
+/* Base Styles */
+body {
+  font-family: "Arial, sans-serif";
+  background-color: var(--bg-light);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--link); /* Changed to navy blue */
+    color: var(--header);
+    padding: 10px 0; /* Reduced padding */
+    text-align: center;
+}
+
+header nav a {
+    color: var(--header);
+    padding: 10px 15px; /* Adjusted padding */
+    transition: color 0.3s ease; /* Added transition for text color */
+}
+
+header nav a:hover {
+    color: var(--link-hover); /* Brightened text color on hover */
+    background-color: var(--link);
+    border-radius: 5px;
+}
+
+/* Main Content Styles */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+article {
+  background-color: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  width: calc(33% - 40px); /* Adjust based on desired column count */
+}
+
+article img {
+  max-width: 100%;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 10px;
+}
+
+article h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--bg);
+  color: var(--header);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-nav,
+.footer-legal {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-nav a,
+.footer-legal a {
+  color: var(--header);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Button Styles */
+button {
+  background-color: var(--btn-bg);
+  color: var(--header);
+  border: none;
+  padding: 5px 10px; /* Smaller padding */
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px; /* Margin to create space between text and button */
+}
+
+button:hover {
+  background-color: var(--btn-bg-hover);
+}
+
+/* Form Styles */
+form {
+  background-color: var(--bg-light);
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  article {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  header nav {
+    flex-direction: column;
+  }
+
+  article {
+    width: 100%;
+  }
+}
+
+ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+li button {
+  margin-left: 10px; /* Space between text and button */
+}
