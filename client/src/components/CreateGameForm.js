@@ -33,20 +33,12 @@ function CreateGameForm({teams}) {
             <label>
                 Home Team:
                 {/* <input type="text" value={homeTeamId} onChange={(e) => setHomeTeamId(e.target.value)} /> */}
-                <select value={homeTeamId} onChange={e => setHomeTeamId(e.target.value)}>
-                    {teams.map(team => {
-                        return <option value={team.id}>{team.name}</option>
-                    })}
-                </select>
+                
             </label>
             <label>
                 Away Team:
                 {/* <input type="text" value={awayTeamId} onChange={(e) => setAwayTeamId(e.target.value)} /> */}
-                <select value={awayTeamId} onChange={e => setAwayTeamId(e.target.value)}>
-                    {teams.map(team => {
-                        return <option value={team.id}>{team.name}</option>
-                    })}
-                </select>
+                
             </label>
             <label>
                 {/* Home Team Score:

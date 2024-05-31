@@ -5,6 +5,7 @@ from flask import Flask, request, make_response, jsonify
 from flask_restful import Api, Resource
 import os
 
+
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 DATABASE = os.environ.get("DB_URI", f"sqlite:///{os.path.join(BASE_DIR, 'app.db')}")
 
@@ -18,6 +19,7 @@ migrate = Migrate(app, db)
 db.init_app(app)
 
 api = Api(app)
+
 
 class Teams(Resource):
     def get(self):
@@ -161,6 +163,20 @@ api.add_resource(Performances, '/performances')
 @app.route("/")
 def index():
     return "<h1>NFL Management API</h1>"
+
+
+@app.route('/games/new', methods=['POST'])
+def add_game():
+    data = request.get_json()
+    new_game = Game(
+        home_team=data['homeTeam'],
+        away_team=data['awayTeam'],
+        home_team_score=data['home_team_score'],
+        away_team_score=data['away_team_score']
+    )
+    db.session.add(new_game)
+    db.session.commit()
+    return jsonify({'message': 'Game added successfully'}), 201
 
 if __name__ == "__main__":
     app.run(port=5555, debug=True)
