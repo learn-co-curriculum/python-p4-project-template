@@ -1,0 +1,107 @@
+/* .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('https://cdn.theatlantic.com/thumbor/EmW-E0FwUa0MhOoGk0BXYyBiBm0=/0x0:1718x1718/1718x1718/media/files/est/space-calculator/background6.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.button-container button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: rgba(100, 150, 250, 0.7);
+  border: 2px solid rgba(180, 220, 255, 0.85);
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 1px 1px 2px black;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+}
+
+.button-container button:hover {
+  background-color: rgba(100, 150, 250, 0.9);
+}
+
+.card, .card-title, .card-text, .card-body, .clickable-item {
+  cursor: pointer; /* Change cursor to pointer */
+/* } */
+
+/* New hover effect */
+/* .card-title:hover, .card-text:hover, .card-body:hover, .clickable-item:hover {
+  color: #00FF00; /* Change text color */
+  /* transition: color 0.3s ease;
+} */ 
+
+/* .clickable-item:hover {
+  background: #333;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor:crosshair
+} */
+
+/* .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(100, 150, 250, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('https://cdn.theatlantic.com/thumbor/EmW-E0FwUa0MhOoGk0BXYyBiBm0=/0x0:1718x1718/1718x1718/media/files/est/space-calculator/background6.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+/* .navbar {
+  background-color: #343a40; Dark background color
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+} */
+
+/* .navrow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+/* .nav-image {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+  border-radius: 50%; Optional, to make the images round
+} */
+
+/* .nav-text {
+  font-size: 1rem;
+  color: #fff;
+} */
+
+/* .container {
+  margin-top: 70px; Adjust based on navbar height
+} */

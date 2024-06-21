@@ -1,0 +1,104 @@
+.spacecraft-container {
+    background-image: url('https://getwallpapers.com/wallpaper/full/3/0/9/62186.jpg');
+    color: #f0f0f0;
+    padding: 30px 20px; /* Increased padding for more breathing room */
+  }
+  
+  /* Title Styling */
+  .spacecraft-title {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 5px 5px 10px #007bff;
+    margin-bottom: 30px;  /* Add space between title and cards */
+    font-size: 2.5rem;
+  }
+  
+  /* Spacecraft Card Styling */
+  .spacecraft-card {
+    background-color: #282828;
+    border: 1px solid #555;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+    margin-bottom: 25px; /* Add space between cards */
+    text-align: center;
+  }
+  
+  .spacecraft-card:hover {
+    transform: translateY(-15px);
+  }
+  
+  /* Image Styling */
+  .spacecraft-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Details Section Styling */
+  .details {
+    padding-top: 10px;
+  }
+  
+  .details p {
+    margin-bottom: 5px;
+    font-size: 1rem; /* Adjust font size for details */
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 5px 5px 10px #007bff;
+    text-align: center;
+  }
+  
+  .spacecraft-card h5{
+    font-size: 1.2rem;
+  }
+  
+  /* Button Styling */
+  .btn-danger {
+    background-color: #ff4136;
+    border: none;
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: solid 5px black;
+    font-size: 0.9rem;
+    font-family: 'Orbitron';
+  }
+  
+  .btn:hover {
+    background-color: #0069d9;
+  }
+
+  .btn-primary {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: solid 5px black;
+    font-size: 0.9rem;
+    font-family: 'Orbitron';
+  }
+  
+  /* Emoji Styling */
+  .emoji {
+    font-size: 24px;
+  }
+
+  body {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/003/384/754/original/animation-of-flying-through-outer-space-towards-milky-way-galaxy-free-video.jpg')
+  }
+
+  .card-title {
+    font-family: 'Orbitron';
+    text-shadow: 0 0 10px #007bff;
+  }
+
+  .new-btn {
+    background-color: #007bff;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Orbitron';
+  }
