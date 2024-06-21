@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+Space Explorer: Mission Control Center
+Welcome to the Space Explorer Mission Control Center, an interactive application designed to fuel your interstellar ambitions. 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This full-stack web application allows users to:
 
-## Available Scripts
+Register/Login: Securely create accounts or log in to save their mission plans.
+Choose a Player: Select their spacefarer (astronaut/ robot/ alien) from a diverse roster.
+Plan Missions: Design unique missions with destinations, tasks, and required equipment.
+Select Spacecraft: Choose the perfect vehicle for the mission based on its capabilities.
+Explore Destinations: Learn about different celestial bodies (planets, stars, galaxies).
+Features
+Interactive Mission Planning: A user-friendly interface to customize and visualize missions.
+Player Customization: Choose a unique player with a backstory and special equipment.
+Rich Destination Data: Detailed information and images for various celestial bodies.
+Task and Equipment Management: Assign tasks and select essential equipment for each mission.
+Persistent Data: User data and mission plans are saved for future access.
+Technologies
+Frontend:
+React: A component-based JavaScript library for building user interfaces.
+React Router: For handling navigation and managing different views.
+React Bootstrap: For styling and UI components.
+Backend:
+Flask: A lightweight Python web framework.
+SQLAlchemy: An ORM (Object-Relational Mapper) for database interaction.
+Flask-RESTful: To build the RESTful API.
+Flask-JWT-Extended: For implementing JSON Web Token (JWT) authentication.
+Flask-CORS: To manage cross-origin resource sharing (CORS) for security.
+Getting Started
+Prerequisites
+Node.js and npm (or yarn): Make sure you have Node.js and either npm or yarn installed on your system to manage frontend dependencies.
+Python 3: You'll need Python 3 to run the Flask backend.
+Pipenv (recommended): Use Pipenv to manage your Python virtual environment and dependencies for better isolation and reproducibility.
+(Optional) PostgreSQL: For production or a more robust database setup, install PostgreSQL.
+Installation
+Clone the Repository:
 
-In the project directory, you can run:
+Bash
+git clone https://github.com/Tripp-L/phase4-space-proj/tree/main
+cd https://github.com/Tripp-L/phase4-space-proj/tree/main
+code .
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Backend Setup:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Navigate to the server directory: cd server
+Create a virtual environment (if using Pipenv): pipenv install
+Activate the virtual environment: pipenv shell
+Install dependencies: pip install -r requirements.txt
+Configure database settings in config.py (using SQLite or PostgreSQL).
+Run migrations: flask db upgrade
+Start the Flask server: flask run (or use a production server like Gunicorn).
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Frontend Setup:
 
-### `npm run build`
+Navigate to the client directory: cd client
+Install dependencies: npm install (or yarn install)
+Start the development server: npm start (or yarn start)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+API Endpoints
+The Flask backend provides a RESTful API for interacting with the application data:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+GET /players: Fetches all players
+GET /players/<id>: Fetches a specific player
+POST /players: Create new players
+PUT /players/<id>: Edit an existing player
+DELETE /players/<id>: Delete an existing player
+GET /spacecrafts: Fetches all spacecrafts
+GET /spacecrafts/<id>: Fetches a specific spacecraft
+POST /spacecrafts: Create new spacecrafts
+PUT /spacecrafts/<id>: Edit an existing spacecraft
+DELETE /spacecrafts/<id>: Delete an existing spacecraft
+GET /missions: Fetches all missions
+GET /missions/<id>: Fetches a specific mission
+POST /missions: Create new missions
+PUT /missions/<id>: Edit an existing mission
+DELETE /missions/<id>: Delete an existing mission
+GET /celestial_bodies: Fetches all celestial bodies
+GET /celestial_bodies/<id>: Fetches a specific celestial body
+POST /celestial_bodies: Create new celestial bodies
+PUT /celestial_bodies/<id>: Edit an existing celestial body
+DELETE /celestial_bodies/<id>: Delete an existing celestial body
+POST /signup: Creates a new user account
+POST /login: Authenticates a user and returns a JWT token if successful

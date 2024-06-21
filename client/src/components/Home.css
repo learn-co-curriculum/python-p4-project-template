@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('https://cdn.theatlantic.com/thumbor/EmW-E0FwUa0MhOoGk0BXYyBiBm0=/0x0:1718x1718/1718x1718/media/files/est/space-calculator/background6.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+
+.App {
+  padding-top: 56px; 
+}
+
+.welcome {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 5px 5px 10px #007bff;
+}

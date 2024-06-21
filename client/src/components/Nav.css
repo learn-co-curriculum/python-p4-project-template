@@ -1,0 +1,87 @@
+.navbar {
+  background-color: #001f3f; /* Background color similar to the provided image */
+  font-size: 14px; /* Smaller font size */
+  padding: 10px 20px; /* Adjust padding for the navbar */
+  font-family: 'Orbiton', sans-serif;
+  text-align: center;
+  font-weight: lighter;
+  color: white;
+  border: #61dafb solid;
+  border-width: 3px;
+  border-radius: 50px; /* Rounded corners */
+  width: 80%; /* Adjust width to fit content and center */
+  margin: 10px auto; /* Margin to ensure it is centered and spaced properly */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  display: flex; /* Use flexbox to control size and position */
+  justify-content: center; /* Center the navbar content */
+  align-items: center; /* Vertically center the content */
+}
+
+.navrow {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  width: 100%; /* Ensure nav items take up full width for even spacing */
+}
+
+.nav-link {
+  position: relative;
+  color: #61dafb;
+  text-decoration: none;
+  display: flex; 
+  flex-direction: column;
+  align-items: center; /* Center the items horizontally */
+  justify-content: center; /* Center the items vertically */
+  padding: 5px 15px; /* Adjust padding for nav links */
+  margin: 0 10px; 
+  transition: transform 0.3s ease, border-color 0.6s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+  border-left: .5px solid #61dafb; 
+  border-top: none; 
+  border-bottom: none; 
+}
+
+.nav-link:hover::after {
+  content: '';
+  display: block;
+  width: 50px; 
+  height: 2px; 
+  background-color: #61dafb;
+  position: absolute;
+  bottom: -2px; 
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
+.nav-image {
+  min-height: 40px; /* Won't shrink below 40px */
+  max-height: 80px;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px #61dafb;
+  margin-bottom: 5px; /* Add margin to space the image from the text */
+}
+
+.nav-text {
+  color: #61dafb;
+  font-size: 12px; /* Smaller text size */
+  text-align: center; /* Center text below the image */
+}
+
+div.container {
+  min-height: 50px; /* Won't shrink below 50px */
+  max-height: 100px;
+  background-color: transparent;
+  border-width: 3px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}

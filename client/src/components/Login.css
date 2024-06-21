@@ -1,0 +1,44 @@
+html, body {
+  margin: 0; 
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling /
+  overflow-y: auto;
+}
+
+.loginPage {
+  padding: 0; / Remove padding to use full width /
+  min-height: 100vh; / Full viewport height /
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; / Ensures background covers the full page and stays fixed during scroll /
+  width: 100%; / Full viewport width /
+  margin: 0; / Remove default margin /
+  display: flex;
+  flex-direction: column;
+  align-items: center; / Center content horizontally /
+  justify-content: center; / Center content vertically */
+}
+.initLoginContainer {
+  font-family: 'Orbitron', sans-serif;
+  width: 65%;
+  min-height: 250px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid rgba(180, 220, 255, 0.85);
+  background-color: rgba(100, 150, 250, 0.5);
+  border-radius: 10px;
+  box-shadow: 6px 6px 15px #7ea5f3f6, -3px -3px 10px #7ea5f3f6, inset -8px -8px 20px rgba(100, 150, 250, 0.5), inset 5px 5px 10px rgba(100, 150, 250, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #161010;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+}
