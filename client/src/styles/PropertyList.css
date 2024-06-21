@@ -1,0 +1,55 @@
+/* PropertyList.css */
+.propertylist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .propertylist-title-container {
+    margin-bottom: 20px;
+  }
+  
+  .propertylist-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .propertylist-image-container {
+    margin-bottom: 20px;
+  }
+  
+  .propertylist-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .propertylist-info-container {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .propertylist-item {
+    font-size: 18px;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  .propertylist-item:first-child {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .propertylist-item:last-child {
+    font-size: 16px;
+    color: #999;
+  }
+  

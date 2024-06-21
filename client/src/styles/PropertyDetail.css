@@ -1,0 +1,65 @@
+/* PropertyDetail.css */
+/* PropertyDetail.css */
+.property-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .property-title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .property-title h1 {
+    font-size: 32px;
+    color: #333;
+  }
+  
+  .property-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .property-description, .property-price, .property-location {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .property-description {
+    margin-bottom: 20px;
+  }
+  
+  .property-price, .property-location {
+    font-weight: bold;
+  }
+  
+  .home-link, .properties-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .home-link:hover, .properties-link:hover {
+    background-color: #555;
+  }
+  
