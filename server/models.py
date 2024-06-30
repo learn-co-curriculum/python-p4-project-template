@@ -3,7 +3,7 @@ from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.ext.associationproxy import association_proxy 
 from sqlalchemy.orm import validates
 
-from config import db
+from config import db, bcrypt
 
 # Models go here!
 
@@ -22,7 +22,19 @@ class User(db.Model, SerializerMixin):
     recipes = association_proxy("user_recipes", "recipe") 
 
     serialize_rules = ('-user_recipes', '-recipes') 
+    
+    @property
+    def password_hash(self):
+        return self._password_hash
 
+    @password_hash.setter
+    def password_hash(self, password):
+        self._password_hash = bcrypt.generate_password_hash(password).decode('utf-8')
+    
+    
+    def authenticate(self, password):
+        return bcrypt.check_password_hash(self.password_hash, password)
+    
     @validates('username')
     def validate_username(self, key, username):
         if not username:
