@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 from models import db, Album, Member, Review
 from datetime import datetime
 from app import app
@@ -10,9 +11,11 @@ from spotipy.oauth2 import SpotifyClientCredentials
 
 fake = Faker()
 
+
 # Spotify API credentials IMPORTANT!!!!!
 SPOTIFY_CLIENT_ID = 'ee66b6cce6c64912935ff635ad7ece6d'
 SPOTIFY_CLIENT_SECRET = 'c528df65ca6341e29fb1712bf804ad25'
+
 
 # Set up Spotify API client
 auth_manager = SpotifyClientCredentials(client_id=SPOTIFY_CLIENT_ID, client_secret=SPOTIFY_CLIENT_SECRET)
@@ -72,6 +75,7 @@ with app.app_context():
             albums.append(album)
             db.session.add(album)
 
+    
     db.session.commit()
 
     reviews = []

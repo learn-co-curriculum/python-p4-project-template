@@ -5,6 +5,7 @@ from datetime import datetime
 
 from config import db
 
+
 # Models go here!
 
 class Album(db.Model, SerializerMixin):
@@ -28,6 +29,7 @@ class Album(db.Model, SerializerMixin):
             'cover_image': self.cover_image,
             'reviews': [review.to_dict() for review in self.reviews]
         }
+    
 
 class Member(db.Model, SerializerMixin):
     serialize_rules = ('-reviews',)
@@ -54,3 +56,5 @@ class Review(db.Model, SerializerMixin):
             'rating': self.rating,
             'comment': self.comment,
         }
+    
+    
