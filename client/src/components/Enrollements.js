@@ -1,5 +1,5 @@
-function Enrollment(){
-    return <div></div>
+function Enrollment() {
+  return <div></div>;
 }
 
-export default Enrollment
+export default Enrollment;

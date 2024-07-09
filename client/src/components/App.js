@@ -1,8 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
+import Home from "./Home";
+//import Course from "./Course";
+import Enrollment from "./Enrollements";
+import Navbar from "./Navbar";
+import Reviews from "./Reviews";
 
 function App() {
-  return <h1>Project Client</h1>;
+  return (
+    <div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        {/* <Route path="/course" component={Course} /> */}
+        <Route path="/enrollment" component={Enrollment} />
+        <Route path="/reviews" component={Reviews} />
+        <Route path="/navbar" component={Navbar} />
+      </Switch>
+    </div>
+  );
 }
 
 export default App;
