@@ -7,10 +7,11 @@ from config import db
 
 Base = declarative_base()
 
-# Association table for patient symptoms
-patient_symptom = Table('patient_symptom',
-                        Base.metadata,
-                        Column('patient_id', Integer, ForeignKey('patient.id')),
-                        Column('symptom_id', Integer, ForeignKey('symptom.id')),
-                        Column('diagnosis', String(100))
-                        )
+# Doctor model
+class Doctor(Base, SerializerMixin):
+    _tablename_ = 'doctor'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(100), nullable=False)
+    specialty = Column(String(100), nullable=False)
+    status = Column(String(50), nullable=False, default='Active')
+    patients = relationship('Patient', backref='doctor', lazy=True)
