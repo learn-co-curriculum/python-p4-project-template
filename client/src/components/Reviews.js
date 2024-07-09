@@ -1,5 +1,10 @@
-function Reviews(){
-    return <div></div>
+import Navbar from "./Navbar";
+function Reviews() {
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 }
 
-export default Reviews
+export default Reviews;

@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./Home";
@@ -5,6 +6,7 @@ import Home from "./Home";
 import Enrollment from "./Enrollements";
 import Navbar from "./Navbar";
 import Reviews from "./Reviews";
+import "../App.css";
 
 function App() {
   return (
