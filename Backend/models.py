@@ -9,7 +9,7 @@ from config import db
 # Models go here!
 
 class Album(db.Model, SerializerMixin):
-    serialize_rules = ('-reviews',)
+    serialize_rules = ('-reviews.album',)
     
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
@@ -32,13 +32,15 @@ class Album(db.Model, SerializerMixin):
     
 
 class Member(db.Model, SerializerMixin):
-    serialize_rules = ('-reviews',)
+    serialize_rules = ('-reviews.member',)
     
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
     join_date = db.Column(db.DateTime, default=func.now())
     reviews = db.relationship('Review', backref='member', lazy=True)
+
+############add validations##################
 
 class Review(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
@@ -56,5 +58,4 @@ class Review(db.Model, SerializerMixin):
             'rating': self.rating,
             'comment': self.comment,
         }
-    
     
