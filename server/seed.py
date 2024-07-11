@@ -1,17 +1,16 @@
-#!/usr/bin/env python3
-
-# Standard library imports
-from random import randint, choice as rc
-
-# Remote library imports
-from faker import Faker
-
-# Local imports
-from app import app
-from models import db
+from config import db
+print('Database seeded successfully.')
 
 if __name__ == '__main__':
-    fake = Faker()
-    with app.app_context():
-        print("Starting seed...")
-        # Seed code goes here!
+    seed_data()
+from models import Doctor
+
+# Function to seed initial data
+def seed_data():
+    # Create doctors
+    doctor1 = Doctor(name='Dr. Shukri', specialty='Cardiology')
+    doctor2 = Doctor(name='Dr. wayne', specialty='Pediatrics')
+    doctor3 = Doctor(name='Dr. Lee', specialty='Orthopedics')
+
+    db.session.add_all([doctor1, doctor2, doctor3])
+    db.session.commit()
