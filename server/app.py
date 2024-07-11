@@ -9,6 +9,15 @@ from flask_restful import Resource
 # Local imports
 from config import app, db, api
 # Add your model imports
+class Symptom(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.Text)
+    patients = db.relationship('Patient', secondary='patient_symptom', backref='symptoms')
+
+class SymptomSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = Symptom
 
 
 # Views go here!
