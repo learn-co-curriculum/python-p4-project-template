@@ -1,0 +1,65 @@
+
+
+.home-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    margin: 20px;
+}
+
+.welcome-message {
+    margin-bottom: 30px; /* Space below the welcome message */
+    text-align: center; /* Center the text */
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-container {
+    flex: 1; /* Take remaining vertical space */
+    width: 50%; /* Set width to 50% of the container */
+    margin-bottom: 20px; /* Space below each section */
+    padding: 20px;
+    background-color: #f4e0e6a7;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+.books-section {
+    margin-right: 30px; /* Space between sections */
+}
+
+.books-read-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.books-read-list li {
+    display: flex; /* Use flexbox to align items */
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #6b5858;
+    border-radius: 5px;
+}
+
+.books-read-list li img {
+    max-width: 100px;
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.books-read-list li .book-details {
+    flex: 1;
+}
+
+.books-read-list li h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.books-read-list li p {
+    margin: 0;
+    color: #6b5858;
+}

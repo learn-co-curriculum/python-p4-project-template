@@ -1,0 +1,28 @@
+.about-container {
+    margin: 20px auto; /* Center the box horizontally */
+    padding: 30px; /* Increased padding for more space */
+    border: 1px solid #d3c8c8;
+    border-radius: 12px; /* Increased border-radius for a softer look */
+    background-color:  #f4e0e6a7;
+    ; /* Slightly lighter background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 50%; /* Adjust the width as needed */
+    max-width: 700px; /* Set a maximum width */
+}
+
+.about-container h2 {
+    font-size: 25px; /* Larger font size for heading */
+    margin-bottom: 20px; /* Increased margin for separation */
+    text-align: center;
+    text-decoration: underline;
+    color: #6b5858; /* Darker text color */
+    font-family: 'Times New Roman', serif; /* Elegant serif font */
+}
+
+.about-container p {
+    font-size: 18px; /* Slightly larger font size for paragraph */
+    line-height: 1.6; /* Increased line height for readability */
+    text-align: center;
+    color: #6b5858; /* Slightly darker text color */
+    font-family: 'Georgia', serif;
+}

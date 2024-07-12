@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #6b5858; /* Different color for Book Nook header */
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative; /* Ensure relative positioning for pseudo-element */
+}
+
+h1::after {
+    content: ''; /* Create pseudo-element for the underline */
+    display: block;
+    width: 50%; /* Adjust width of underline as needed */
+    border-bottom: 2px solid #ad99a6; /* Color and thickness of the underline */
+    position: absolute;
+    bottom: -5px; /* Adjust vertical position to control distance from text */
+    left: 25%; /* Adjust horizontal position to center the underline */
+}
+
+h2, h3 {
+    color: #b47281; /* Elegant dark mauve color */
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+    background-color: #c2a7b3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover {
+    background-color: #d29ab3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.book-club-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4e0e65d;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.club-container, .book-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.book-club-item, .book-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.book-club-item:hover, .book-item:hover {
+    transform: scale(1.05);
+}
+
+.book-club-item h4, .book-item h4 {
+    margin: 0 0 10px;
+}
+
+.book-club-item p, .book-item p {
+    margin: 0 0 10px;
+}
+
+.book-club-item img, .book-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+select {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}

@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
+    color: #b47281; /* Elegant dark mauve color */
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Container for the profile forms */
+.profile-forms {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f4e0e6a7; /* Light mauve background */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+.form-container {
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Input styles */
+.form-container input[type="text"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Button styles */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #b47281; /* Mauve color */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #915a67; /* Darker mauve color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* List styles */
+.profile-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* List item styles */
+.profile-list li {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Input styles within list items */
+.profile-list li input[type="text"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Button styles within list items */
+.profile-list li button {
+    padding: 10px;
+    background-color: #b47281; /* Mauve color */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-list li button:hover {
+    background-color: #915a67; /* Darker mauve color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus styles for input fields */
+.form-container input[type="text"]:focus,
+.profile-list li input[type="text"]:focus {
+    border-color: #915a67; /* Focus color */
+    outline: none;
+}
+
