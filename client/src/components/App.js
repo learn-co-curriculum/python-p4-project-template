@@ -1,8 +1,27 @@
-import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './App.css';
+import Home from './Home';
+import MensShoes from './MensShoes';
+import WomensShoes from './WomensShoes';
+import KidsShoes from './KidsShoes';
+import Cart from './Cart';  
+
 
 function App() {
-  return <h1>Project Client</h1>;
+  return (
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/mens-shoes" component={MensShoes} />
+          <Route path="/womens-shoes" component={WomensShoes} />
+          <Route path="/kids-shoes" component={KidsShoes} />
+          <Route path="/cart" component={Cart} /> 
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
