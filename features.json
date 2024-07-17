@@ -1,0 +1,226 @@
+[
+  {
+    "car_cc": 3996,
+    "feature_id": 1,
+    "fuel_type": "Petrol",
+    "speed_km": "330km/h",
+    "vehicle_id": 1,
+    "vehicles": null
+  },
+  {
+    "car_cc": 3604,
+    "feature_id": 2,
+    "fuel_type": "Petrol",
+    "speed_km": "282km/h",
+    "vehicle_id": 2,
+    "vehicles": null
+  },
+  {
+    "car_cc": 2996,
+    "feature_id": 3,
+    "fuel_type": "Petrol",
+    "speed_km": "280km/h",
+    "vehicle_id": 3,
+    "vehicles": null
+  },
+  {
+    "car_cc": 6750,
+    "feature_id": 4,
+    "fuel_type": "Petrol",
+    "speed_km": "250km/h",
+    "vehicle_id": 4,
+    "vehicles": null
+  },
+  {
+    "car_cc": 3649,
+    "feature_id": 5,
+    "fuel_type": "Petrol",
+    "speed_km": "180km/h",
+    "vehicle_id": 5,
+    "vehicles": null
+  },
+  {
+    "car_cc": 2670,
+    "feature_id": 6,
+    "fuel_type": "Petrol",
+    "speed_km": "240km/h",
+    "vehicle_id": 6,
+    "vehicles": null
+  },
+  {
+    "car_cc": 3902,
+    "feature_id": 7,
+    "fuel_type": "Petrol",
+    "speed_km": "340",
+    "vehicle_id": 7,
+    "vehicles": null
+  },
+  {
+    "car_cc": 6498,
+    "feature_id": 8,
+    "fuel_type": "Petrol",
+    "speed_km": "varies",
+    "vehicle_id": 8,
+    "vehicles": null
+  },
+  {
+    "car_cc": 6500,
+    "feature_id": 9,
+    "fuel_type": "Petrol",
+    "speed_km": "360km/h",
+    "vehicle_id": 9,
+    "vehicles": null
+  },
+  {
+    "car_cc": 5986,
+    "feature_id": 10,
+    "fuel_type": "Petrol",
+    "speed_km": "360km/h",
+    "vehicle_id": 10,
+    "vehicles": null
+  },
+  {
+    "car_cc": 2000,
+    "feature_id": 11,
+    "fuel_type": "Petrol",
+    "speed_km": "240km/h",
+    "vehicle_id": 11,
+    "vehicles": null
+  },
+  {
+    "car_cc": 3982,
+    "feature_id": 12,
+    "fuel_type": "Petrol",
+    "speed_km": "220",
+    "vehicle_id": 12,
+    "vehicles": null
+  },
+  {
+    "car_cc": 2995,
+    "feature_id": 13,
+    "fuel_type": "Plug-in Hybrid (Petrol)",
+    "speed_km": "250",
+    "vehicle_id": 13,
+    "vehicles": null
+  },
+  {
+    "car_cc": 2979,
+    "feature_id": 14,
+    "fuel_type": "Petrol",
+    "speed_km": "250",
+    "vehicle_id": 14,
+    "vehicles": null
+  },
+  {
+    "car_cc": 3452,
+    "feature_id": 15,
+    "fuel_type": "Petrol",
+    "speed_km": "250",
+    "vehicle_id": 15,
+    "vehicles": null
+  },
+  {
+    "car_cc": 3800,
+    "feature_id": 16,
+    "fuel_type": "Petrol",
+    "speed_km": "350",
+    "vehicle_id": 16,
+    "vehicles": null
+  },
+  {
+    "car_cc": 2600,
+    "feature_id": 17,
+    "fuel_type": "electric",
+    "speed_km": "280",
+    "vehicle_id": 17,
+    "vehicles": null
+  },
+  {
+    "car_cc": 2700,
+    "feature_id": 18,
+    "fuel_type": "electric",
+    "speed_km": "280",
+    "vehicle_id": 18,
+    "vehicles": null
+  },
+  {
+    "car_cc": 2998,
+    "feature_id": 19,
+    "fuel_type": "petrol",
+    "speed_km": "320",
+    "vehicle_id": 19,
+    "vehicles": null
+  },
+  {
+    "car_cc": 3493,
+    "feature_id": 20,
+    "fuel_type": "hybrid",
+    "speed_km": "320",
+    "vehicle_id": 20,
+    "vehicles": null
+  },
+  {
+    "car_cc": 3548,
+    "feature_id": 21,
+    "fuel_type": "petrol",
+    "speed_km": "180",
+    "vehicle_id": 21,
+    "vehicles": null
+  },
+  {
+    "car_cc": 2789,
+    "feature_id": 22,
+    "fuel_type": "petrol",
+    "speed_km": "220",
+    "vehicle_id": 22,
+    "vehicles": null
+  },
+  {
+    "car_cc": 2669,
+    "feature_id": 23,
+    "fuel_type": "petrol",
+    "speed_km": "250",
+    "vehicle_id": 23,
+    "vehicles": null
+  },
+  {
+    "car_cc": 2200,
+    "feature_id": 24,
+    "fuel_type": "petrol",
+    "speed_km": "180",
+    "vehicle_id": 24,
+    "vehicles": null
+  },
+  {
+    "car_cc": 2400,
+    "feature_id": 25,
+    "fuel_type": "petrol",
+    "speed_km": "180",
+    "vehicle_id": 25,
+    "vehicles": null
+  },
+  {
+    "car_cc": 7993,
+    "feature_id": 26,
+    "fuel_type": "petrol",
+    "speed_km": "420",
+    "vehicle_id": 26,
+    "vehicles": null
+  },
+  {
+    "car_cc": 6894,
+    "feature_id": 27,
+    "fuel_type": "petrol",
+    "speed_km": "360",
+    "vehicle_id": 27,
+    "vehicles": null
+  },
+  {
+    "car_cc": 6217,
+    "feature_id": 28,
+    "fuel_type": "petrol",
+    "speed_km": "296",
+    "vehicle_id": 28,
+    "vehicles": null
+  }
+]

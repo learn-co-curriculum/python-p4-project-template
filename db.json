@@ -1,0 +1,284 @@
+{
+  "vehicles": [
+    {
+      "car_image": "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/16q1/665058/2016-porsche-911-r-photos-and-info-news-car-and-driver-photo-666371-s-original.jpg?fill=2:1&resize=1200:*",
+      "description": "two doors, high perfomance, rare back",
+      "make": "porsche",
+      "model": "911R",
+      "owner_id": 2,
+      "price": "150000USD",
+      "vehicle_id": 1,
+      "year": 2016
+    },
+    {
+      "car_image": "https://i.pinimg.com/564x/49/6a/ad/496aad6753e634854e03ed350d31b72a.jpg",
+      "description": "high reving engine, high perfomance, rocker protection",
+      "make": "jeep wrangler",
+      "model": "rubicon",
+      "owner_id": 1,
+      "price": "140000USD",
+      "vehicle_id": 2,
+      "year": 2024
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/fb/91/ba/fb91ba03e0242d6f7636ee2b8f4835d9.jpg",
+      "description": "five doors, crossover SUV, infotainment",
+      "make": "Range Rover",
+      "model": "velar",
+      "owner_id": 2,
+      "price": "226600USD",
+      "vehicle_id": 3,
+      "year": 2024
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/bb/6c/52/bb6c5247b5b71ae58383594a93f76007.jpg",
+      "description": "sharp handling, pointing to its all-wheel-steering system and 50/50 weight distribution",
+      "make": "Rolls Royce",
+      "model": "ghost",
+      "owner_id": null,
+      "price": "416250USD",
+      "vehicle_id": 4,
+      "year": 2021
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/4a/7d/79/4a7d79194bda784e5282bf9ec8cc4104.jpg",
+      "description": "Elegant, flowing lines are accented with tasteful chrome trim on the bodywork and around the headlights and taillights",
+      "make": "Buick",
+      "model": "Enclave",
+      "owner_id": null,
+      "price": "90250USD",
+      "vehicle_id": 5,
+      "year": 2008
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/f1/ba/5b/f1ba5bd6ea10eca082ad42904c1bf23f.jpg",
+      "description": "midsize SUV with five-passenger seating.",
+      "make": "Subaru",
+      "model": "Outback",
+      "owner_id": null,
+      "price": "31195USD",
+      "vehicle_id": 6,
+      "year": 2016
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/ad/e0/83/ade083146c304eea302cac636ef784ba.jpg",
+      "description": "Fast, sexy, and highly exclusive",
+      "make": "Ferrari",
+      "model": "f8 tributo",
+      "owner_id": null,
+      "price": "331000USD",
+      "vehicle_id": 7,
+      "year": 2019
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/ee/68/99/ee689969bc63f913d6e3a922e25f3315.jpg",
+      "description": "The Lamborghini Aventador is a powerful and stylish supercar, known for its aggressive looks and exceptional performance.",
+      "make": "Lamborghini",
+      "model": "Aventador",
+      "owner_id": null,
+      "price": "Starting at 400,000USD",
+      "vehicle_id": 8,
+      "year": 2024
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/d5/fe/8a/d5fe8ac2191403eab346d5c7641cd4c0.jpg",
+      "description": "A powerful and iconic muscle car, known for its performance and spacious interior.",
+      "make": "Dodge",
+      "model": "Charger",
+      "owner_id": null,
+      "price": "Starting at around 35,000USD",
+      "vehicle_id": 9,
+      "year": 2024
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/5a/63/8c/5a638c42e41466d40cff7154610b5d70.jpg",
+      "description": "A legendary sports car known for its smooth, high-revving Wankel rotary engine and exceptional handling.",
+      "make": "Mazda",
+      "model": "RX-7",
+      "owner_id": null,
+      "price": "Varies depending on condition (Consider mentioning a range or average price)",
+      "vehicle_id": 10,
+      "year": 2002
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/0b/93/79/0b9379e6382c78b4cfca50d70c28483d.jpg",
+      "description": "A powerful and capable full-size pickup truck known for its towing capacity, spacious interior, and available hybrid powertrain.",
+      "make": "Toyota",
+      "model": "Tundra",
+      "owner_id": null,
+      "price": "Starting around 35,000USD",
+      "vehicle_id": 11,
+      "year": 2024
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/32/16/9c/32169cb01bdf9c2c3f7aabbec95b7f68.jpg",
+      "description": "A luxurious and powerful off-road SUV, known for its iconic boxy design, exceptional capability, and premium features.",
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "owner_id": null,
+      "price": "Starting around $130,000USD",
+      "vehicle_id": 12,
+      "year": 2024
+    },
+    {
+      "car_image": "https://i.pinimg.com/564x/4e/08/12/4e08126676dfad794e6ac442c3708ccf.jpg",
+      "description": "A luxurious and powerful plug-in hybrid SUV, offering exceptional performance, efficiency, and spacious comfort for up to 7 passengers.",
+      "make": "Audi",
+      "model": "Q7 60 TFSI e quattro",
+      "owner_id": null,
+      "price": "Starting around $80,000USD",
+      "vehicle_id": 13,
+      "year": 2024
+    },
+    {
+      "car_image": "https://i.pinimg.com/564x/0e/b7/61/0eb761ce62dfbfab5fe736be9d77dbfb.jpg",
+      "description": "A high-performance compact coupe, offering a thrilling driving experience with its powerful engine, sharp handling, and sleek design.",
+      "make": "BMW",
+      "model": "M2 Coupe",
+      "owner_id": null,
+      "price": "Starting around $63,000USD",
+      "vehicle_id": 14,
+      "year": 2024
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/a6/d1/95/a6d195f8893d2ae4f04418095238a19d.jpg",
+      "description": "A legendary American muscle car from 1969, known for its powerful V8 engines, aggressive design, and cultural influence.",
+      "make": "Dodge",
+      "model": "Charger",
+      "owner_id": null,
+      "price": "Varies depending on condition (Provide a range if possible)",
+      "vehicle_id": 15,
+      "year": 1969
+    },
+    {
+      "car_image": "https://i.pinimg.com/564x/67/9c/bf/679cbf8a91f91aca7b2e7083a633eec3.jpg",
+      "description": "A ground-breaking hypercar from McLaren, featuring a hybrid powertrain with a powerful V8 engine and an electric motor, offering exceptional performance, lightweight construction, and innovative technology.",
+      "make": "McLaren",
+      "model": "P1",
+      "owner_id": null,
+      "price": "Varies depending on condition (Consider mentioning a range or average price)",
+      "vehicle_id": 16,
+      "year": 2014
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/23/c0/d6/23c0d6aba261002b0b152b4c7030c4f4.jpg",
+      "description": "A futuristic and functional electric pickup truck with a sharp, stainless-steel exoskeleton design, known for its durability, power, and performance.",
+      "make": "Tesla",
+      "model": "Cybertruck",
+      "owner_id": null,
+      "price": "Starting around $39,900USD (base price, may vary depending on options)",
+      "vehicle_id": 17,
+      "year": 2024
+    },
+    {
+      "car_image": "https://i.pinimg.com/736x/63/eb/48/63eb48a8cd7e7d2eb44fd95281aa3181.jpg",
+      "description": "An upcoming all-electric supercar with record-setting performance and a focus on sustainable innovation.",
+      "make": "Tesla",
+      "model": "Roadster",
+      "owner_id": null,
+      "price": "Starting at $200,000USD (base reservation price)",
+      "vehicle_id": 18,
+      "year": "Not yet in production (expected in 2024)"
+    },
+    {
+      "car_image": "https://i.pinimg.com/564x/9e/6a/c6/9e6ac6f90cf2034eab0f2634d641878a.jpg",
+      "description": "A family of sportbikes known for their performance, sharp handling, and focus on sport riding.",
+      "make": "Honda",
+      "model": "CBR (Series)",
+      "owner_id": null,
+      "price": "starts around $6,000USD for used models and goes up to $20,000USD ",
+      "vehicle_id": 19,
+      "year": "Varies depending on model (production years range from 1983 to present)"
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/a3/92/28/a3922870b785bc9e6e8f3c68a58465c6.jpg",
+      "description": "A high-performance mid-engine sports car, known for its exceptional handling, powerful engine, and luxurious interior. The NSX has two generations, with the first produced from 1990 to 2005 and the second generation starting in 2015.",
+      "make": "Honda",
+      "model": "NSX",
+      "owner_id": null,
+      "price": "Varies depending on model year and condition (Expect a wide range, from under $40,000USD for used first-generation models to well over $150,000USD for newer models)",
+      "vehicle_id": 20,
+      "year": 2015
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/21/17/4f/21174fbcd602f3355f78842dcb496500.jpg",
+      "description": "A stylish and well-equipped car from Chevrolet in 1939. The Master Deluxe was known for its comfortable ride, improved features, and powerful engine for the time.",
+      "make": "Chevrolet",
+      "model": "Master Deluxe",
+      "owner_id": null,
+      "price": "from around $18,000USD to $40,000USD ",
+      "vehicle_id": 21,
+      "year": 1939
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/9d/12/ac/9d12ac2dc23567809b98041883507463.jpg",
+      "description": "Futuristic design, high-performance capabilities (details not officially revealed), driver-focused cockpit",
+      "make": "Toyota",
+      "model": "FT-1",
+      "owner_id": null,
+      "price": "150000USD",
+      "vehicle_id": 22,
+      "year": 2014
+    },
+    {
+      "car_image": "https://i.pinimg.com/474x/c8/fb/4e/c8fb4e08761497d2b04ec7635d075e21.jpg",
+      "description": "High-performance sports car, powerful engine, excellent handling, driver-focused interior",
+      "make": "Toyota",
+      "model": "Supra",
+      "owner_id": null,
+      "price": "$43,440 USD - $58,550 USD",
+      "vehicle_id": 23,
+      "year": 2023
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/44/d9/f4/44d9f4976990300a96bfada5d107ee17.jpg",
+      "description": "Spacious SUV, comfortable ride, various engine options (details may vary depending on model year)",
+      "make": "Toyota",
+      "model": "Harrier",
+      "owner_id": null,
+      "price": "KES 3,500,000 - KES 5,600,000",
+      "vehicle_id": 24,
+      "year": "2016 - 2022"
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/30/04/b4/3004b47f7eede03da2b80f4fdbeac4bf.jpg",
+      "description": "The 2024 model year is the last confirmed production year for the Chevrolet Camaro (as of July 11, 2024). It boasts powerful engines and a sporty design.",
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "owner_id": null,
+      "price": "N/A (New models not available)",
+      "vehicle_id": 25,
+      "year": 2024
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/6b/33/b0/6b33b0f075ab210dfc3fcd5c1a07e9d1.jpg",
+      "description": "Ultra-luxury hypercar, powerful W16 engine, exceptional performance, limited production",
+      "make": "Bugatti",
+      "model": "Chiron",
+      "owner_id": null,
+      "price": "Starting at $3.3 million USD (New models)",
+      "vehicle_id": 26,
+      "year": "2016 - Present"
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/10/de/ba/10deba0b36b8924f81ece16cf608a730.jpg",
+      "description": "Iconic American muscle car, various engine options (EcoBoost 4-cylinder or V8), range of trims, known for its performance and style",
+      "make": "Ford",
+      "model": "Mustang",
+      "owner_id": null,
+      "price": "$30,920 USD - $62,930 USD (Estimated based on trim level)",
+      "vehicle_id": 27,
+      "year": 2024
+    },
+    {
+      "car_image": "https://i.pinimg.com/236x/64/99/5c/64995c9cb47da977b80cec2aabf0e213.jpg",
+      "description": "American mid-engine sports car, powerful LT2 V8 engine, exceptional handling, luxurious interior on higher trims",
+      "make": "Chevrolet",
+      "model": "Corvette C8",
+      "owner_id": null,
+      "price": "$62,195 USD - $79,490 USD (Estimated for new models)",
+      "vehicle_id": 28,
+      "year": 2020
+    }
+  ]
+}
