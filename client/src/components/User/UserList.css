@@ -1,0 +1,24 @@
+.user-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .user-list-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .user-list-container li {
+    margin-bottom: 10px;
+  }
+  
+  .user-list-container a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .user-list-container a:hover {
+    text-decoration: underline;
+  }
+  

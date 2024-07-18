@@ -1,0 +1,35 @@
+.user-review-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .user-review-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .user-review-form input,
+  .user-review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .user-review-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .user-review-form button:hover {
+    background-color: #0056b3;
+  }
+  
