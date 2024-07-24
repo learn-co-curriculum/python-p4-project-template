@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 ipdb = "0.13.9"
 flask = "*"
-flask-sqlalchemy = "3.0.3"
+flask-sqlalchemy = "*"
 Werkzeug = "2.2.2"
 flask-migrate = "*"
 sqlalchemy-serializer = "*"

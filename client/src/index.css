@@ -4,4 +4,434 @@
   --link: #61dafb;
   --text: hsla(0, 0%, 100%, 0.88);
 }
+:root {
+  --bg: #282c34;
+  --header: #fff;
+  --link: #61dafb;
+  --text: hsla(0, 0%, 100%, 0.88);
+}
 
+/* MenuTable.css */
+
+.menu-table {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-header {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+}
+
+form {
+  margin-bottom: 20px;
+  /* display: grid; Use grid layout for more control */
+  gap: 10px;
+}
+
+form label {
+  /* Grid settings for labels */
+  grid-column: 1 / 2;
+  grid-row: auto; /* Auto place */
+  margin-bottom: 10px;
+}
+
+form input,
+form button {
+  /* Grid settings for inputs and buttons */
+  grid-column: 2 / 3;
+  grid-row: auto; /* Auto place */
+  width: 100%; /* Full width input fields */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: lightskyblue;
+}
+
+.table td {
+  vertical-align: top;
+}
+
+.table td:last-child {
+  text-align: center;
+}
+
+.delete-button {
+  background-color: #f30d0d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Navbar.css */
+
+nav {
+  background-color: #0dbbbb;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+li {
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+a.active {
+  background-color: #000000;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  /* Adjust form layout for smaller screens */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  form label,
+  form input,
+  form button {
+    width: calc(50% - 5px); /* Two columns with gap */
+  }
+
+  form label {
+    margin-bottom: 5px;
+  }
+}
+
+
+/* Navbar.css */
+
+nav {
+  background-color: #0dbbbb;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+li {
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+a.active {
+  background-color: #000000;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.order-table th, .order-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.order-table th {
+  background-color: lightskyblue;
+}
+
+.order-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.order-table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.menu-list {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.food-image {
+  width: 80%;
+  border-radius: 8px 8px 0 0;
+}
+
+.menu-item h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.menu-item p {
+  margin: 10px 0;
+}
+
+.menu-item button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-item button:hover {
+  background-color: #0056b3;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.side-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.chosen-items-title {
+  margin-top: 0;
+}
+
+.chosen-items-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.chosen-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* .food-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
+  margin-right: 10px;
+} */
+
+.chosen-item p {
+  margin: 0;
+  flex: 1;
+}
+
+.place-order-btn {
+  background-color: #188a22;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.place-order-btn:hover {
+  background-color: #1a8a04;
+}
+
+.orders-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.orders-info {
+  margin-bottom: 20px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.orders-table th,
+.orders-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.orders-table th {
+  background-color: #f2f2f2;
+}
+
+.orders-table td {
+  vertical-align: middle;
+}
+
+.orders-empty {
+  text-align: center;
+  margin-top: 20px;
+}
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.food-image {
+  width: 100%;
+  height: 250px; /* Set a fixed height for consistency */
+  border-radius: 8px 8px 0 0;
+  object-fit: cover; /* Ensure the image covers the entire space */
+}
+
+.menu-item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-item-description {
+  margin-top: 10px;
+  flex: 1; /* Ensures description expands as needed */
+}
+
+.menu-item button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Adjust as needed */
+}
+
+.menu-item button:hover {
+  background-color: #0056b3;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+/* Global Variables */
+:root {
+  --bg: #282c34;
+  --header: #fff;
+  --link: #61dafb;
+  --text: hsla(0, 0%, 100%, 0.88);
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--header); /* Use global header color */
+}
