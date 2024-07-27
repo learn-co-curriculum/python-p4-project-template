@@ -1,0 +1,149 @@
+/* Container for the whole table */
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* General styling for the table */
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.project-table th,
+.project-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.project-table th {
+  background-color: #4CAF50;
+  color: white;
+  text-align: left;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+  .project-table thead {
+    display: none;
+  }
+  .project-table, .project-table tbody, .project-table tr, .project-table td {
+    display: block;
+    width: 100%;
+  }
+  .project-table tr {
+    margin-bottom: 15px;
+  }
+  .project-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  .project-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+/* Styling for the action buttons */
+.project-table .action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.project-table .action-buttons button {
+  padding: 5px 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Specific colors for each button */
+.project-table .action-buttons .view-button {
+  background-color: #007bff;
+}
+
+.project-table .action-buttons .view-button:hover {
+  background-color: #0056b3;
+}
+
+.project-table .action-buttons .edit-button {
+  background-color: #4CAF50;
+}
+
+.project-table .action-buttons .edit-button:hover {
+  background-color: #45a049;
+}
+
+.project-table .action-buttons .delete-button {
+  background-color: #dc3545;
+}
+
+.project-table .action-buttons .delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Styling for the add project button */
+button.add-project-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.add-project-button:hover {
+  background-color: #45a049;
+}
+
+/* Modal styling */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

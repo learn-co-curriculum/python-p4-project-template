@@ -1,0 +1,51 @@
+.home-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  /* Remove background-color: #7dbde8; */
+  text-align: center;
+}
+
+.home-container h2 {
+  font-size: var(--header-font-size);
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+
+.home-container p {
+  font-size: var(--font-size);
+  color: var(--text-color);
+  margin-bottom: 2em;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.action-button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: var(--font-size);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 8px; /* Rounded corners */
+}
+
+.action-button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+/* Ensure footer is at the bottom of the page */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f1f1f1; /* Example background color */
+  text-align: center;
+  padding: 10px 0;
+}
