@@ -1,0 +1,70 @@
+/* General styles */
+.ships-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ship-header,
+  .ship-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .ship-header {
+    font-weight: bold;
+    background-color: #f1f1f1;
+  }
+  
+  .ship-card {
+    background-color: beige;
+  }
+  
+  .filter-buttons {
+    margin-bottom: 20px;
+    text-align: center; /* Updated to center align */
+  }
+  
+  .filter-buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .filter-buttons button:focus {
+    outline: none;
+  }
+  
+  /* Specific styles for Shiplist component */
+  .maroon-text {
+    color: maroon;
+  }
+  
+  .green-text {
+    color: green;
+  }
+  
+  #head {
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .titles {
+    color: blue;
+  }
+  
+  .ship-card:hover {
+    background-color: #d1d86a;
+  }
+  
+  /* Additional styles can be added here */
+  

@@ -1,0 +1,232 @@
+.home-container {
+  background-image: url("https://images.pexels.com/photos/1838680/pexels-photo-1838680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+.hero {
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero h1,
+.hero p,
+.hero .cta-button {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.cta-button,
+.ports-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1cafb9;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, outline 0.3s;
+}
+
+.cta-button:hover,
+.ports-button:hover {
+  background-color: #158e98;
+}
+
+.cta-button:focus,
+.ports-button:focus {
+  outline: 3px solid #0f8e98;
+  outline-offset: 2px;
+}
+
+.info-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+}
+
+.info-card {
+  background-color: #1cafb9;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 30px;
+  width: 350px;
+  height: 450px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background-color: #ff6b6b;
+}
+
+.info-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.info-card:hover img {
+  transform: scale(1.05);
+}
+
+.info-card h2 {
+  color: rgb(8, 8, 8);
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.info-card p {
+  position: relative;
+  z-index: 1;
+  color: rgb(46, 46, 46);
+}
+
+.info-card::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(255, 107, 107, 0.8), transparent);
+  transition: top 0.3s ease-out;
+  z-index: 0;
+}
+
+.info-card:hover::before {
+  top: 0;
+}
+
+@media (max-width: 1200px) {
+  .info-card {
+    width: calc(50% - 60px);
+  }
+}
+
+@media (max-width: 768px) {
+  .info-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+.ports-section {
+  background-color: rgba(255, 255, 255, 0);
+  color: #33333300;
+  text-align: center;
+  padding: 60px 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.ports-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #1cafb9, #ff6b6b);
+  opacity: 0.3;
+  z-index: 0;
+  transition: opacity 0.3s;
+}
+
+.ports-section:hover::before {
+  opacity: 0.5;
+}
+
+.ports-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  color: #1cafb9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.ports-section p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  color: #bdbdbd;
+}
+
+.ports-section p strong {
+  color: #ff6b6b;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.ports-button {
+  background-color: #1cafb9;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.ports-button:hover {
+  background-color: #158e98;
+  transform: translateY(-3px);
+}
+
+.ports-button:focus {
+  outline: 3px solid #0f8e98;
+  outline-offset: 2px;
+}

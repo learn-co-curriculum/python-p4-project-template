@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.user-container {
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(53, 190, 190, 0.603);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.user-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.balance-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.balance-amount {
+  font-weight: bold;
+}
+
+.deposit-bar {
+  margin-top: 10px;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(90%);
+}
+
+.last-booking {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 30px;
+  max-width: 300px;
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.last-booking h2 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.last-booking p {
+  margin-bottom: 5px;
+  font-size: 0.875rem;
+}
+
+.shipment-status-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.shipment-status {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #dc3545;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.shipment-message {
+  animation: pulse 2s infinite;
+  font-size: smaller;
+  color: green;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.btn-logout {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}

@@ -1,0 +1,11 @@
+[build]
+  command = "CI=false pip install pipenv && pipenv install --deploy --system && pip install sqlalchemy-serializer && cd client && npm install && npm run build"
+  publish = "client/build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  directory = "server/functions"

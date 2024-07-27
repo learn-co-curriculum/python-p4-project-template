@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "client": "^0.0.1",
+    "react-router-dom": "^6.24.1",
+    "server": "^1.0.39"
+  }
+}

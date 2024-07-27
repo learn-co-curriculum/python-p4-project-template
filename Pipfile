@@ -13,6 +13,6 @@ sqlalchemy-serializer = "*"
 flask-restful = "*"
 flask-cors = "*"
 faker = "*"
-
+gunicorn = "*"
 [requires]
-python_full_version = "3.8.13"
+python_full_version ="3.8"

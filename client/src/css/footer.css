@@ -1,0 +1,49 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  padding-bottom: 20px;
+}
+
+.footer {
+  background: #1cafb9;
+  padding: 10px 20px;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(28, 42, 44, 0.1);
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+}
+
+.company-footer {
+  text-align: center;
+  flex: 1;
+}
+
+.contacts {
+  text-align: right;
+}
+
+.contacts ul {
+  padding: 0;
+  margin: 0;
+}
+
+.contact-item {
+  margin: 5px 0;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.contact-item:hover {
+  text-decoration: underline;
+}
