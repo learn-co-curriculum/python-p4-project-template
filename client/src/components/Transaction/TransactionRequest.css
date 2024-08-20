@@ -1,0 +1,58 @@
+.request-form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:400px;
+    margin:0 auto;
+    width:300px;
+}
+
+
+input[type="text"], input[type="number"], button[type="submit"], option {
+    height:40px;  
+    border-radius: 50px;
+    text-align: center;
+  }
+
+.payment-type{
+    display:flex;
+    justify-content: space-around;
+
+    
+}
+
+.payment-type label {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.payment-type input[type="radio"] {
+    display: none; /* Hide the actual radio button */
+}
+
+
+.payment-type input[type="radio"]:checked + label {
+    background-color: black;
+    color: white;
+}
+
+.payment-type label:hover {
+    background-color: gray;
+}
+h3{
+    display: flex;
+    justify-content: center;
+}
+
+button[type="submit"]{
+    background-color: lightgray;
+}
