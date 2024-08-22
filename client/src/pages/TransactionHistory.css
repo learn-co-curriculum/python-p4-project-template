@@ -1,0 +1,57 @@
+.transaction-history {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .filter-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .transaction-type-select,
+  .search-input,
+  .search-button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-input {
+    flex-grow: 1;
+  }
+  
+  .search-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .transactions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .transaction-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 15px;
+  }
+  
+  .transaction-detail {
+    margin: 5px 0;
+  }

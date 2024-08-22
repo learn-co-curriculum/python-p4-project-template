@@ -1,0 +1,13 @@
+input[type="submit"]{
+    border-radius: 10px;
+    width:80px;
+    height:20px;
+
+}
+
+input[type="text"], input[type="password"],button[type="submit"], option {
+    height:40px;  
+    border-radius: 50px;
+    text-align: center;
+  }
+
