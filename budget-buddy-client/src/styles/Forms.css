@@ -1,0 +1,10 @@
+.add-expense-form input, .add-expense-form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer; /* Ensure pointer is enabled */
+}
+
+.add-expense-form button {
+    background-color: #007BFF;
+    color: white;
+}

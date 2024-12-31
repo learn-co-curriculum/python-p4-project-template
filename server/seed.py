@@ -1,17 +1,24 @@
-#!/usr/bin/env python3
+from app import app, db
+from models import User, Expense
+from datetime import date
 
-# Standard library imports
-from random import randint, choice as rc
+with app.app_context():
+    db.drop_all()  # Optional: Clears the database
+    db.create_all()
 
-# Remote library imports
-from faker import Faker
+    user1 = User(username="testuser")
+    user1.set_password("password123")
 
-# Local imports
-from app import app
-from models import db
+    expense1 = Expense(
+        name="Groceries",
+        amount=50.25,
+        category="Food",
+        date=date(2024, 1, 1),
+        user=user1
+    )
 
-if __name__ == '__main__':
-    fake = Faker()
-    with app.app_context():
-        print("Starting seed...")
-        # Seed code goes here!
+    db.session.add(user1)
+    db.session.add(expense1)
+    db.session.commit()
+
+    print("Database seeded successfully!")

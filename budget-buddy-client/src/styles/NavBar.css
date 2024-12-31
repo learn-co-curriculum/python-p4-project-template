@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.logout-button {
+    border: none;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+}
