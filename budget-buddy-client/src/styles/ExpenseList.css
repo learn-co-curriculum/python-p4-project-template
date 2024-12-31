@@ -1,0 +1,13 @@
+.expense-list {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.expense-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.expense-list li {
+    margin: 5px 0;
+}  

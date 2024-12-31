@@ -1,0 +1,231 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #a6c8ff; /* Light blue background */
+    border-bottom: 2px solid #5f8fdb; /* Slightly darker blue for the border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded edges for a soft look */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #ff6f61; /* Soft pink on hover */
+    transform: translateY(-3px); /* Slight upward movement for effect */
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #ff6f61; /* Soft pink for active link */
+}
+
+/* Logout Button Styling */
+.logout-button {
+    border: none;
+    background-color: transparent;
+    color: #2c3e50;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 50px; /* Rounded button */
+    border: 2px solid #ff6f61; /* Pink border */
+}
+
+.logout-button:hover {
+    background-color: #ff6f61;
+    color: #ffffff;
+}
+
+.logout-button:focus {
+    outline: none;
+}
+
+/* Add Expense Form */
+.add-expense-form input, .add-expense-form button {
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 15px;
+}
+
+.add-expense-form button {
+    background-color: #ff6f61; /* Soft pink */
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-expense-form button:hover {
+    background-color: #ff3b30;
+    transform: translateY(-2px);
+}
+
+/* Expense List */
+.expense-list {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.expense-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.expense-list li {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.expense-list li:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    background-color: #f0f8ff; /* Light blue on hover */
+}
+
+/* Dashboard Styling */
+.dashboard {
+    padding: 20px;
+    background-color: #f4f7fb;
+    border-radius: 12px;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f5;
+    color: #2c3e50;
+}
+
+/* Intro Section Styling */
+.intro-section {
+    background-color: #ffffff;
+    padding: 90px 40px;
+    text-align: center;
+    border-radius: 20px; /* Soft, rounded corners */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    background: linear-gradient(135deg, #a6c8ff 0%, #c4e0ff 100%);
+    animation: fadeIn 2s ease-out; /* Animation for smooth intro */
+}
+
+/* New Description Box Styling */
+.intro-description-box {
+    background-color: #f9f9f9; /* Light grey box for the description */
+    padding: 40px 30px;
+    border-radius: 15px; /* Soft, rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto; /* Center the box */
+    text-align: center;
+}
+
+/* Heading Styling */
+.intro-section h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+/* Paragraph Styling */
+.intro-section p {
+    font-size: 18px;
+    color: #7f8c8d;
+    line-height: 1.8;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Button Styling */
+.intro-section button {
+    padding: 18px 36px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners for button */
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro-section button:hover {
+    background-color: #ff3b30;
+    transform: translateY(-3px);
+}
+
+/* Keyframes for Intro Fade In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 60px 20px;
+    }
+
+    .intro-section h1 {
+        font-size: 36px;
+    }
+
+    .intro-section p {
+        font-size: 16px;
+    }
+
+    .intro-section button {
+        padding: 12px 25px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
