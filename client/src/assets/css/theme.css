@@ -1,0 +1,271 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+/* === Theme Variables === */
+:root {
+    /* Colors */
+    --primary-color: #ff6f61;
+    --secondary-color: #6a5acd;
+    --background-color: #fefefe;
+    --text-color: #333;
+    --accent-color: #ffbf00;
+    --button-hover: #ff8c42;
+
+    /* Fonts */
+    --font-family: "Poppins", sans-serif;
+    --heading-font-family: "Raleway", sans-serif; 
+    --font-size-base: 16px;
+    --font-size-large: 1.5rem;
+    --font-size-small: 0.9rem;
+
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+
+    /* Border Radius */
+    --border-radius: 8px;
+    --card-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Reset and Global Styles === */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font-family); 
+    font-weight: bold;
+    margin: var(--spacing-medium) 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--accent-color);
+}
+
+button {
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    padding: var(--spacing-small) var(--spacing-medium);
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: var(--button-hover);
+}
+
+/* === Bootstrap Overrides === */
+.navbar {
+    background-color: var(--primary-color);
+}
+.navbar-brand {
+    color: white;
+    font-size: var(--font-size-large);
+    font-weight: bold;
+}
+.navbar-brand:hover {
+    color: var(--accent-color);
+}
+
+/* === Custom Components === */
+.card {
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: var(--spacing-large);
+    background-color: white;
+    margin: var(--spacing-large) 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.fun-button {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+.fun-button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+}
+.bouncing-icon {
+    display: inline-block;
+    animation: bounce 1s infinite;
+}
+
+/* === Layout Helpers === */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: var(--spacing-large);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* === Media Queries === */
+@media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    .card {
+      padding: var(--spacing-medium);
+    }
+}
+/* === New Styles for MenuTop Component === */
+.text-box {
+    background-color: var(--primary-color); /* Use the primary color from your theme */
+    color: white; /* Ensure text is readable */
+    padding: var(--spacing-small); /* Consistent padding using theme variable */
+    border-radius: var(--border-radius); /* Consistent border radius using theme variable */
+    display: inline-block;
+}
+
+.username-text {
+    width: 100%; /* Ensures full width of the column */
+    text-align: center;
+}
+
+
+/* MenuBottom Styles */
+.navbar {
+    background-color: var(--primary-color); /* Use the primary color from your theme */
+}
+
+.menu-btn {
+    border: 1px solid var(--accent-color); /* Accent color for button borders */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effects */
+}
+
+.menu-btn:hover {
+    background-color: var(--accent-color); /* Change background on hover */
+    color: white; /* Ensure text is readable on hover */
+}
+
+.navbar-brand {
+    font-family: var(--heading-font-family); /* Use a distinct font for the brand */
+    font-weight: bold;
+}
+
+.nav-link {
+    margin-left: var(--spacing-small); /* Spacing between buttons */
+}
+
+/* RoutineCard Styles */
+
+
+.routine-card {
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.routine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.text-primary {
+    color: var(--primary-color); /* Use primary color for title */
+}
+
+.badge-primary {
+    background-color: var(--primary-color); /* Use primary color for badges */
+    color: white;
+}
+
+.list-group-item {
+    background-color: var(--background-color); /* Ensure list items match background */
+}
+
+.action-button {
+    background-color: var(--primary-color); /* Use the primary color from your theme */
+    color: white; /* Ensure text is readable */
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-small) var(--spacing-medium);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: var(--button-hover); /* Use a hover color variant */
+    transform: scale(1.05); /* Slightly enlarge on hover for effect */
+}
+
+.routine-title {
+    font-family: 'Raleway', sans-serif; /* Use a font that looks athletic */
+    font-size: 2rem; /* Make it larger */
+    color: var(--accent-color); /* Use a fun accent color */
+    font-weight: bold;
+    display: inline-block;
+}
+
+.routine-title {
+    font-family: 'Raleway', sans-serif; /* Use an athletic-looking font */
+    font-size: 2.5rem; /* Make it larger for emphasis */
+    color: var(--primary-color); /* Use a theme color for visual appeal */
+    font-weight: 800; /* Increase the weight for a bold, strong look */
+    text-transform: uppercase; /* Make the text uppercase for impact */
+    letter-spacing: 0.05em; /* Slightly increase letter spacing for style */
+    margin: 0; /* Ensure there's no extra margin */
+    padding: 0; /* Ensure there's no extra padding */
+}
+
+/* ExerciseCard Styles */
+
+
+.exercise-card {
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.exercise-title {
+    font-family: 'Raleway', sans-serif; /* Use a font that looks athletic */
+    font-size: 2rem; /* Make it larger */
+    color: var(--accent-color); /* Use a fun accent color */
+    font-weight: bold;
+    display: inline-block;
+}
+
+.exercise-title {
+    font-family: 'Raleway', sans-serif; /* Use an athletic-looking font */
+    font-size: 2.5rem; /* Make it larger for emphasis */
+    color: var(--primary-color); /* Use a theme color for visual appeal */
+    font-weight: 800; /* Increase the weight for a bold, strong look */
+    text-transform: uppercase; /* Make the text uppercase for impact */
+    letter-spacing: 0.05em; /* Slightly increase letter spacing for style */
+    margin: 0; /* Ensure there's no extra margin */
+    padding: 0; /* Ensure there's no extra padding */
+}

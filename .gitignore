@@ -8,6 +8,8 @@
 # Ignore bundler config.
 /.bundle
 
+/__pycache__/*
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-*
@@ -17,6 +19,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/server/migrations/*
 
 # Runtime data
 pids
@@ -54,10 +57,6 @@ jspm_packages
 
 # Virtual env metadata
 .venv
-
-# pytest cache
-.pytest_cache
-__pycache__
 
 # database
 *.db
