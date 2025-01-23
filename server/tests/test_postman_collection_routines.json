@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "755407fb-1201-4d3c-a721-5ae93060d21e",
+		"name": "fitness_fanatics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "routines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/routines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"routines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "routines",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": 1,\n  \"exercise_id\": 1,\n  \"initial_weight\": 50,\n  \"current_weight\": 0,\n  \"initial_reps\": 5,\n  \"current_reps\": 0,\n  \"initial_sets\": 12,\n  \"current_sets\": 0,\n  \"priority\": 4,\n  \"day_of_the_week\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/routines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"routines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "routines/<int:id>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/routines/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"routines",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "routines/<int:id>",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"current_weight\": 10,\n  \"current_reps\": 18,\n  \"current_sets\": 5,\n  \"priority\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/routines/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"routines",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "routines/<int:id>",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/routines/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"routines",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
