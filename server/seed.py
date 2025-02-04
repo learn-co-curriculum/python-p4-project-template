@@ -1,17 +1,36 @@
-#!/usr/bin/env python3
+from app import db
+from models import Card, User  # Adjust imports if necessary
+from werkzeug.security import generate_password_hash
 
-# Standard library imports
-from random import randint, choice as rc
+def seed_cards():
+    card_urls = [
+        "Home.jpeg",
+        "350.jpeg",
+        "Elegant House Design.jpeg",
+    ]
 
-# Remote library imports
-from faker import Faker
+    for url in card_urls:
+        card = Card(url=url)
+        db.session.add(card)
+    
+    db.session.commit()
+    print("Cards have been seeded successfully.")
 
-# Local imports
-from app import app
-from models import db
+def seed_users():
+    users = [
+        {"name": "John Doe", "email": "john.doe@example.com", "password": "password123"},
+        {"name": "Jane Smith", "email": "jane.smith@example.com", "password": "password456"},
+    ]
 
-if __name__ == '__main__':
-    fake = Faker()
-    with app.app_context():
-        print("Starting seed...")
-        # Seed code goes here!
+    for user_data in users:
+        hashed_password = generate_password_hash(user_data["password"], method="sha256")
+        user = User(name=user_data["name"], email=user_data["email"], password=hashed_password)
+        db.session.add(user)
+
+    db.session.commit()
+    print("Users have been seeded successfully.")
+
+if __name__ == "__main__":
+    seed_cards()
+    seed_users()
+    print("Seeding completed.")
