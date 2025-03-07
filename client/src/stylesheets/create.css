@@ -1,0 +1,40 @@
+.create {
+  padding: 4rem;
+}
+
+div.new-restaurant-form {
+  height: 80%;
+  display: flex;
+  text-align: left;
+}
+
+.new-restaurant-form h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.new-restaurant-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  margin: auto;
+  width: 60%;
+  background-color: rgba(254, 216, 177);
+}
+
+input.form-input {
+  margin-top: 17px;
+  margin-bottom: 3rem;
+}
+
+.new-restaurant-form button {
+  width: 150px;
+}
+
+label.radioButtonLabel {
+  width: max-content;
+}
+
+label {
+  margin-top: 1.5rem;
+}

@@ -1,0 +1,121 @@
+{
+  "restaurants": [
+    {
+      "id": "1",
+      "name": "The Breakfast Club",
+      "image": "../images/the_breakfast_club.jpg",
+      "location": "123 Market St, San Francisco, CA 94103",
+      "isFavorite": true,
+      "phoneNumber": "(415) 234-5656",
+      "rating": 3.5
+    },
+    {
+      "id": "2",
+      "name": "Hasumi Sushi",
+      "image": "../images/hasumi_sushi.jpg",
+      "location": "456 Tech Ave, San Jose, CA 95110",
+      "isFavorite": false,
+      "phoneNumber": "(408) 010-3223",
+      "rating": 3.8
+    },
+    {
+      "id": "3",
+      "name": "Eureka",
+      "image": "../images/eureka.jpg",
+      "location": "789 Bay St, Oakland, CA 94607",
+      "isFavorite": false,
+      "phoneNumber": "(510) 284-4488",
+      "rating": 3.2
+    },
+    {
+      "id": "4",
+      "name": "Manakish Oven & Grill",
+      "image": "../images/manakish_oven_grill.jpg",
+      "location": "321 University Ave, Palo Alto, CA 94301",
+      "isFavorite": true,
+      "phoneNumber": "(669) 645-6233",
+      "rating": 3
+    },
+    {
+      "id": "5",
+      "name": "Ramen Hiroshi",
+      "image": "../images/ramon_hiroshi.jpg",
+      "location": "654 Shattuck Ave, Berkeley, CA 94704",
+      "isFavorite": false,
+      "phoneNumber": "(341) 968-2353",
+      "rating": 2.9
+    },
+    {
+      "id": "6",
+      "name": "Pacific Catch",
+      "image": "../images/pacific_catch.jpg",
+      "location": "987 Castro St, Mountain View, CA 94041",
+      "isFavorite": true,
+      "phoneNumber": "(650) 123-7892",
+      "rating": 3.3
+    },
+    {
+      "id": "7",
+      "name": "Vanda Thai",
+      "image": "../images/vanda_thai.jpg",
+      "location": "123 Fremont Blvd, Fremont, CA 94538",
+      "isFavorite": false,
+      "phoneNumber": "(341) 778-8771",
+      "rating": 2.7
+    },
+    {
+      "id": "8",
+      "name": "Torsap Thai Kitchen",
+      "image": "../images/torsap_thai_kitchen.jpg",
+      "location": "456 Sunnyvale Ave, Sunnyvale, CA 94086",
+      "isFavorite": true,
+      "phoneNumber": "(408) 923-9531",
+      "rating": 3.4
+    },
+    {
+      "id": "9",
+      "name": "Daryoush Persian Cuisine",
+      "image": "../images/daryoush_persian_cuisine.jpg",
+      "location": "789 Santa Clara St, Santa Clara, CA 95050",
+      "isFavorite": false,
+      "phoneNumber": "(669) 851-9070",
+      "rating": 3.6
+    },
+    {
+      "id": "10",
+      "name": "Main Street Kithen & Bar",
+      "image": "../images/main_street_kitchen_bar.jpg",
+      "location": "321 Redwood St, Redwood City, CA 94063",
+      "isFavorite": true,
+      "phoneNumber": "(408) 321-2141",
+      "rating": 3.9
+    },
+    {
+      "id": "376a",
+      "name": "Sakana Sushi",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXs-uBnxMORefAVoZVz7TgJr-iXxO7w2Lg-Q&s",
+      "location": "1280 Newell Ave. Walnut Creek, CA 94596",
+      "isFavorite": true,
+      "phoneNumber": "(925) 253-7763",
+      "rating": 4
+    },
+    {
+      "id": "e0a2",
+      "name": "Haya Ramen",
+      "image": "https://www.beyondthecreek.com/wp-content/uploads/2020/02/haya-ramen-pleasant-hill-outside-dev.jpg",
+      "location": "35 Crescent Dr. Ste D. Pleasant Hill, CA 94523",
+      "isFavorite": false,
+      "phoneNumber": "(925) 849-6171",
+      "rating": "3.1"
+    },
+    {
+      "id": "a2f4",
+      "name": "Dumpling House Mongolian Cuisine",
+      "image": "https://lh3.googleusercontent.com/p/AF1QipOEoVBOq4O9T_XJlOCA5o6H1s6YhEPKSkbSnPvo=s680-w680-h510",
+      "location": "12221 San Pablo Ave #6, Richmond, CA 94805",
+      "isFavorite": true,
+      "phoneNumber": "(510) 234-9898",
+      "rating": "4.0"
+    }
+  ]
+}

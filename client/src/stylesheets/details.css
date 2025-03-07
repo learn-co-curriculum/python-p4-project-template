@@ -1,0 +1,19 @@
+.details {
+  font-size: large;
+  color: rgb(63, 4, 4);
+  background-color: whitesmoke;
+}
+
+.details img {
+  width: 25rem;
+  height: 15rem;
+  margin-bottom: 3rem;
+}
+
+span {
+  margin-right: 1rem;
+}
+
+.text {
+  text-align: left;
+}
