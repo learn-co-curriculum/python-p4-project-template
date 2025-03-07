@@ -1,0 +1,52 @@
+:root {
+  --orange: rgb(255, 123, 91);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  /* color: #ecb176;
+  text-shadow: 0.5px 0.5px 1px black, 0 0 1em yellow */
+  font-weight: bold;
+  color: #ecb176;
+  text-shadow: 0.5px 0.5px 1px black
+}
+
+hr.border-line {
+  margin: 3rem 10px;
+  border: 3px solid #6f4e6f;
+  border-radius: 5px;
+  width: auto;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+div.home {
+  text-align: center;
+}
+
+input {
+  padding: 0.25rem;
+  border: none;
+  font-family: inherit;
+  font-size: 15px;
+  border-bottom: 2px solid gray;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--green);
+}

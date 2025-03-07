@@ -1,0 +1,35 @@
+.home h1 {
+  font-weight: bold;
+  color: purple;
+  text-shadow: 0.5px 0.5px 1px black
+}
+
+.home {
+  padding: 4rem;
+  text-align: center;
+}
+
+div.home {
+  position: relative;
+  height: 100%;
+}
+
+div.home:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-image: url('../../public/images/international\ cuisine.jpeg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.searchbar {
+  margin: 3rem 2rem 2rem auto;
+  width: 50%;
+}
