@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  background-color: #ff6b00;
+  padding: 10px;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a,
+nav button {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+nav a:hover,
+nav button:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1644px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
