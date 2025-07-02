@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@replayio/playwright": "^5.0.0"
+  }
+}
