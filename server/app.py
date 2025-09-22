@@ -8,14 +8,26 @@ from flask_restful import Resource
 
 # Local imports
 from config import app, db, api
-# Add your model imports
+# Import models
+from models import Station, Pump, Staff, Sale, sale_staff
 
+# Shell context for Flask CLI
+@app.shell_context_processor
+def make_shell_context():
+    return {
+        'db': db,
+        'Station': Station,
+        'Pump': Pump,
+        'Staff': Staff,
+        'Sale': Sale,
+        'sale_staff': sale_staff
+    }
 
 # Views go here!
 
 @app.route('/')
 def index():
-    return '<h1>Project Server</h1>'
+    return '<h1>Petrol Station Management API</h1>'
 
 
 if __name__ == '__main__':
