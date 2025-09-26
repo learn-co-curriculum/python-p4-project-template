@@ -1,12 +1,15 @@
-# Standard library imports
 
 # Remote library imports
+from datetime import timedelta
+import os
+from werkzeug.utils import secure_filename
 from flask import Flask
 from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_restful import Api
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import MetaData
+from flask_jwt_extended import JWTManager
 
 # Local imports
 
@@ -15,6 +18,9 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
+app.config['JWT_SECRET_KEY'] = 'your-secret-key-here'  # Change in production
+app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(hours=24)
+jwt = JWTManager(app)
 
 # Define metadata, instantiate db
 metadata = MetaData(naming_convention={
@@ -29,3 +35,14 @@ api = Api(app)
 
 # Instantiate CORS
 CORS(app)
+
+# Upload configuration
+app.config['UPLOAD_FOLDER'] = 'uploads/properties'
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webp'}
+
+# Create upload directory
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
