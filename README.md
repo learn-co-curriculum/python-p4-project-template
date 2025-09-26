@@ -1,167 +1,246 @@
-# Phase 4 Full-Stack Application Project Template
+# D-TRACK: Diabetes Management App
 
-## Learning Goals
+A full-stack diabetes management application that helps patients log glucose readings, understand trends, get local food guidance, set reminders, and contact their doctor. Built with a Flask API backend and a React frontend. Localized for Kenya with bilingual (English/Swahili) support and local food insights.
 
-- Discuss the basic directory structure of a full-stack Flask/React application.
-- Carry out the first steps in creating your Phase 4 project.
+## Table of Contents
+- Overview
+- Features
+- Tech Stack
+- Project Structure
+- Getting Started
+- Running the App
+- API Overview
+- Data Models & Relationships
+- Forms & Validation
+- Client-side Routing
+- Troubleshooting
 
----
+## Overview
 
-## Introduction
+This app provides a centralized dashboard for recent readings, BMI, insights and education. It includes personalized food recommendations based on latest glucose status, BMI category, and localized Kenyan guidance. Users can set reminders, message their doctor, and track progress.
 
-Fork and clone this lesson for a template for your full-stack application. Take
-a look at the directory structure before we begin (NOTE: node_modules will be
-generated in a subsequent step):
+## Features
 
-```console
-$ tree -L 2
-$ # the -L argument limits the depth at which we look into the directory structure
-.
-├── CONTRIBUTING.md
-├── LICENSE.md
-├── Pipfile
-├── README.md
-├── client
-│   ├── README.md
-│   ├── package.json
-│   ├── public
-│   └── src
-└── server
-    ├── app.py
-    ├── config.py
-    ├── models.py
-    └── seed.py
+- Readings: Fasting, pre-meal, post-meal, bedtime, random.
+- Trends: Glucose chart (last 30 readings), BMI trend, summary cards.
+- Food guidance: “What to eat now” with reasons/tags (low-GI, high-fiber, etc.).
+- Reminders: Medication and check-in reminders with schedules.
+- Doctor contact: Assigned doctor card with call/email; secure messaging with emergency flag.
+- Education: Localized tips and onboarding education.
+- Gamification: Progress and badges (optional module).
+
+## Tech Stack
+
+- Frontend: React, React Router, Formik + Yup, Recharts, vanilla CSS.
+- Backend: Flask, Flask-RESTful, Flask-JWT-Extended, Flask-CORS, Flask-Migrate, SQLAlchemy, Marshmallow.
+- Database: SQLite (development).
+
+## Project Structure
+
+```text
+Diabetes-Management-App/
+├─ client/
+│  ├─ src/
+│  │  ├─ components/
+│  │  │  ├─ App.js, NavBar.js, Dashboard.js, Readings.js, profile.js
+│  │  │  ├─ education.js, Smartalert.js, DoctorMessages.js, Reminders.js
+│  │  │  ├─ LanguageContext.js, AuthContext.js
+│  │  ├─ index.js, index.css
+│  └─ package.json
+├─ server/
+│  ├─ app.py, config.py, schema.py, models.py
+│  ├─ migrations/
+└─ README.md
 ```
 
-A `migrations` folder will be added to the `server` directory in a later step.
+## Getting Started
 
-The `client` folder contains a basic React application, while the `server`
-folder contains a basic Flask application. You will adapt both folders to
-implement the code for your project .
+### Prerequisites
 
-NOTE: If you did not previously install `tree` in your environment setup, MacOS
-users can install this with the command `brew install tree`. WSL and Linux users
-can run `sudo apt-get install tree` to download it as well.
+- Node.js >= 16
+- Python >= 3.9
 
-## Where Do I Start?
+### Backend Setup
 
-Just as with your Phase 3 Project, this will likely be one of the biggest
-projects you've undertaken so far. Your first task should be creating a Git
-repository to keep track of your work and roll back any undesired changes.
+1. Create and activate a virtual environment.
+2. Install dependencies:
+   ```bash
+   pip install -r server/requirements.txt
+   ```
+3. Initialize the database (SQLite by default):
+   ```bash
+   export FLASK_APP=server/app.py
+   flask db upgrade || (flask db init && flask db migrate && flask db upgrade)
+   ```
+4. (Optional) Seed sample doctors with phone numbers:
+   ```bash
+   curl -X POST http://localhost:5555/doctors/seed
+   ```
 
-### Removing Existing Git Configuration
+### Frontend Setup
 
-If you're using this template, start off by removing the existing metadata for
-Github and Canvas. Run the following command to carry this out:
-
-```console
-$ rm -rf .git .canvas
+```bash
+cd client
+npm install
 ```
 
-The `rm` command removes files from your computer's memory. The `-r` flag tells
-the console to remove _recursively_, which allows the command to remove
-directories and the files within them. `-f` removes them permanently.
+## Running the App
 
-`.git` contains this directory's configuration to track changes and push to
-Github (you want to track and push _your own_ changes instead), and `.canvas`
-contains the metadata to create a Canvas page from your Git repo. You don't have
-the permissions to edit our Canvas course, so it's not worth keeping around.
+### Start the Backend
 
-### Creating Your Own Git Repo
+```bash
+python server/app.py
+# or
+FLASK_APP=server/app.py flask run -p 5555
+```
 
-First things first- rename this directory! Once you have an idea for a name,
-move one level up with `cd ..` and run
-`mv python-p4-project-template <new-directory-name>` to change its name (replace
-<new-directory-name> with an appropriate project directory name).
+### Start the Frontend
 
-> **Note: If you typed the `mv` command in a terminal within VS Code, you should
-> close VS Code then reopen it.**
+```bash
+cd client
+npm start
+```
 
-> **Note: `mv` actually stands for "move", but your computer interprets this
-> rename as a move from a directory with the old name to a directory with a new
-> name.**
+By default, the backend runs on [http://localhost:5555](http://localhost:5555) and the frontend on [http://localhost:3000](http://localhost:3000).
 
-`cd` back into your new directory and run `git init` to create a local git
-repository. Add all of your local files to version control with `git add --all`,
-then commit them with `git commit -m'initial commit'`. (You can change the
-message here- this one is just a common choice.)
+## 🚀 Key Features
 
-Navigate to [GitHub](https://github.com). In the upper-right corner of the page,
-click on the "+" dropdown menu, then select "New repository". Enter the name of
-your local repo, choose whether you would like it to be public or private, make
-sure "Initialize this repository with a README" is unchecked (you already have
-one), then click "Create repository".
+### **Core Diabetes Management**
+- Blood sugar tracking with color-coded results
+- Medication reminders with overdue detection
+- BMI calculator with health insights
+- Doctor-patient relationship management
 
-Head back to the command line and enter
-`git remote add origin git@github.com:github-username/new-repository-name.git`.
-NOTE: Replace `github-username` with your github username, and
-`new-repository-name` with the name of your new repository. This command will
-map the remote repository to your local repository. Finally, push your first
-commit with `git push -u origin main`.
+###  **Kenyan Localization**
+- **Bilingual Support**: Full English/Swahili interface
+- **Local Food Database**: 8 traditional foods (ugali, sukuma wiki, chapati, etc.)
+- **Cultural Context**: NHIF integration, traditional herbs awareness
+- **Local Statistics**: Kenya-specific diabetes education
 
-Your project is now version-controlled locally and online. This will allow you
-to create different versions of your project and pick up your work on a
-different machine if the need arises.
+### **Smart Features**
+- **AI-Powered Alerts**: Glucose pattern analysis and predictions
+- **Food Impact Predictor**: Personalized recommendations for Kenyan foods
+- **Gamification**: Daily challenges, badges, progress tracking
+- **Interactive Education**: Diabetes lessons with quizzes
 
----
+## 🏗️ Technical Architecture
 
-## Setup
+### Backend (Flask API)
 
-### `server/`
+```text
+server/
+├── app.py                 # Main Flask application with 15+ API endpoints
+├── config.py             # Database and app configuration
+├── models.py             # 5 SQLAlchemy models with relationships
+├── seed.py               # Sample data including Kenyan doctors and foods
+├── kenyan_foods.py       # Local food database with glucose impact data
+├── glucose_predictor.py  # AI pattern analysis and predictive alerts
+├── gamification.py       # Badge system and daily challenges
+└── migrations/           # Database migration files
+```
 
-The `server/` directory contains all of your backend code.
+### Frontend (React SPA)
 
-`app.py` is your Flask application. You'll want to use Flask to build a simple
-API backend like we have in previous modules. You should use Flask-RESTful for
-your routes. You should be familiar with `models.py` and `seed.py` by now, but
-remember that you will need to use Flask-SQLAlchemy, Flask-Migrate, and
-SQLAlchemy-Serializer instead of SQLAlchemy and Alembic in your models.
+```text
+client/src/
+├── components/
+│   ├── App.js            # Main app with routing (9 routes)
+│   ├── AuthContext.js    # Authentication state management
+│   ├── Dashboard.js      # Welcome page with BMI and doctor info
+│   ├── Readings.js       # Blood sugar tracking with color coding
+│   ├── Medications.js    # Smart medication reminders
+│   ├── FoodInsights.js   # Kenyan food database with recommendations
+│   ├── SmartAlerts.js    # AI-powered glucose pattern alerts
+│   ├── Gamification.js   # Progress tracking, badges, challenges
+│   ├── Education.js      # Interactive diabetes education modules
+│   └── Profile.js        # User profile with doctor assignment
+├── contexts/
+│   └── LanguageContext.js # Bilingual support (English/Swahili)
+└── utils/
+    └── translations.js    # Translation strings for localization
+```
 
-The project contains a default `Pipfile` with some basic dependencies. You may
-adapt the `Pipfile` if there are additional dependencies you want to add for
-your project.
+### Database Schema
 
-To download the dependencies for the backend server, run:
+```text
+Models & Relationships:
+├── User (1:many → Reading, Medication) + (many:1 → Doctor)
+├── Doctor (1:many → User)
+├── Reading (many:many → Meal via reading_meals association)
+├── Medication (many:1 → User)
+└── Meal (many:many → Reading via reading_meals)
+```
 
-```console
+##  Quick Start
+
+### Requirements
+
+- Python 3.8+
+- Node.js 14+
+- Git
+
+### 1. Clone and Setup Repository
+
+```bash
+git clone <your-repo-url>
+cd Diabetes-Management-App
+```
+
+### 2. Backend Setup
+
+```bash
+cd server
 pipenv install
 pipenv shell
 ```
 
-You can run your Flask API on [`localhost:5555`](http://localhost:5555) by
-running:
+### 3. Database Setup
 
-```console
-python server/app.py
+```bash
+# Initialize database and migrations
+flask db init
+flask db migrate -m "Initial migration"
+flask db upgrade
+
+# Seed with sample data (including Kenyan doctors and foods)
+python seed.py
 ```
 
-Check that your server serves the default route `http://localhost:5555`. You
-should see a web page with the heading "Project Server".
+### 4. Start Backend Server
 
-### `client/`
+```bash
+python app.py
+```
+The API will be available at `http://localhost:5555`
 
-The `client/` directory contains all of your frontend code. The file
-`package.json` has been configured with common React application dependencies,
-include `react-router-dom`. The file also sets the `proxy` field to forward
-requests to `"http://localhost:5555". Feel free to change this to another port-
-just remember to configure your Flask app to use another port as well!
+### 5. Frontend Setup
 
-To download the dependencies for the frontend client, run:
-
-```console
-npm install --prefix client
+```bash
+cd ../client
+npm install
 ```
 
-You can run your React app on [`localhost:3000`](http://localhost:3000) by
-running:
+### 6. Start Frontend Development Server
 
-```sh
-npm start --prefix client
+```bash
+npm start
 ```
+The React app will be available at `http://localhost:3000`
 
-Check that your the React client displays a default page
-`http://localhost:3000`. You should see a web page with the heading "Project
-Client".
+##  Testing the Application
+
+### Sample Login Credentials
+After running the seed script, you can login with:
+- **Email**: `user1@example.com`
+- **Password**: `password123`
+
+### Key User Flows to Test
+1. **Language Toggle**: Click 🇰🇪 SW / 🇺🇸 EN button in navbar
+2. **Blood Sugar Tracking**: Add readings and see color-coded results
+3. **Food Insights**: Explore Kenyan foods and their glucose impact
+4. **Smart Alerts**: Add multiple readings to trigger pattern analysis
+5. **Gamification**: Complete daily challenges and earn badges
+6. **Doctor Assignment**: Assign a doctor in Profile page
 
 ## Generating Your Database
 
@@ -308,50 +387,15 @@ def howdy():
 
 ---
 
-## Updating Your README.md
 
-`README.md` is a Markdown file that describes your project. These files can be
-used in many different ways- you may have noticed that we use them to generate
-entire Canvas lessons- but they're most commonly used as homepages for online
-Git repositories. **When you develop something that you want other people to
-use, you need to have a README.**
+## Authors
 
-Markdown is not a language that we cover in Flatiron's Software Engineering
-curriculum, but it's not a particularly difficult language to learn (if you've
-ever left a comment on Reddit, you might already know the basics). Refer to the
-cheat sheet in this lesson's resources for a basic guide to Markdown.
+- Birundu
+- Nicholas
+- Mohamed
 
-### What Goes into a README?
+## License
 
-This README should serve as a template for your own- go through the important
-files in your project and describe what they do. Each file that you edit (you
-can ignore your migration files) should get at least a paragraph. Each function
-should get a small blurb.
+MIT License
 
-You should descibe your application first, and with a good level of detail. The
-rest should be ordered by importance to the user. (Probably routes next, then
-models.)
-
-Screenshots and links to resources that you used throughout are also useful to
-users and collaborators, but a little more syntactically complicated. Only add
-these in if you're feeling comfortable with Markdown.
-
----
-
-## Conclusion
-
-A lot of work goes into a full-stack application, but it all relies on concepts
-that you've practiced thoroughly throughout this phase. Hopefully this template
-and guide will get you off to a good start with your Phase 4 Project.
-
-Happy coding!
-
----
-
-## Resources
-
-- [Setting up a respository - Atlassian](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
-- [Create a repo- GitHub Docs](https://docs.github.com/en/get-started/quickstart/create-a-repo)
-- [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
-- [Python Circular Imports - StackAbuse](https://stackabuse.com/python-circular-imports/)
-- [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/)
+Copyright (c) 2025 Birundu, Nicholas, and Mohamed

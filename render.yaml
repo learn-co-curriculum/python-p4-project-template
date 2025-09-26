@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: dtrack-api
+    env: python
+    buildCommand: pip install -r server/requirements.txt
+    startCommand: gunicorn server.app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: FLASK_ENV
+        value: production
+
+  - type: static
+    name: dtrack-web
+    buildCommand: cd client && npm ci && npm run build
+    staticPublishPath: client/build
+    envVars:
+      - key: REACT_APP_API_BASE_URL
+        # Replace with your backend URL after first deploy
+        value: https://dtrack-api.onrender.com

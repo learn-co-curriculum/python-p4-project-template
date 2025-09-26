@@ -1,0 +1,11 @@
+Flask==2.3.3
+flask-restful==0.3.10
+flask-cors==4.0.0
+Flask-SQLAlchemy==3.0.5
+Flask-Migrate==4.0.5
+SQLAlchemy==2.0.21
+flask-jwt-extended==4.6.0
+flask-marshmallow==1.2.1
+marshmallow==3.21.1
+marshmallow-sqlalchemy==0.29.0
+bcrypt==4.1.2

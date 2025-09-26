@@ -11,7 +11,13 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "formik": "^2.4.5",
+    "yup": "^1.4.0",
+    "recharts": "^2.8.0",
+    "react-chartjs-2": "^5.2.0",
+    "chart.js": "^4.4.0",
+    "date-fns": "^2.30.0"
   },
   "devDependencies": {"@babel/plugin-proposal-private-property-in-object":"^7.21.11"},
   "scripts": {

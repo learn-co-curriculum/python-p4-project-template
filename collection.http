@@ -1,0 +1,55 @@
+GET http://localhost:5555
+###
+
+POST http://localhost:5555/signup
+Content-Type: application/json
+
+{
+    "name": "testuser",
+    "password": "testpassword",
+    "email":"testuser@admin.com"
+}
+###
+POST http://localhost:5555/login
+Content-Type: application/json
+
+{
+    "email": "testuser@admin.com",
+    "password": "testpassword"
+}
+###
+
+POST http://localhost:5555/login
+Content-Type: application/json
+
+{
+    "email": "testuser@admin.com",
+    "password": "testpassword",
+    "diabetes_type": "Type 1",
+    "age": 30,
+    "weight": 70,
+    "height": 175,
+    "activity_level": "Moderate",
+    "carb_intake": 200, 
+    "insulin_sensitivity": 50,
+    "target_blood_sugar": 100,
+    "education_insights": true
+}
+###
+POST http://localhost:5556/signup
+Content-Type: application/json
+
+{
+    "name": "testuser",
+    "password": "testpassword",
+    "email":"testuser@admin.com"
+}
+###
+
+POST http://localhost:5556/login
+Content-Type: application/json
+{
+    "email": "testuser@admin.com",
+    "password": "testpassword",
+    "diabetes_type": "Type 1",
+}
